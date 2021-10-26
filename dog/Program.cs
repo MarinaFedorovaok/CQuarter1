@@ -20,4 +20,5 @@ while (distance > 10)
         distance = distance-(firstFriendSpeed+secondFrieidSpeed)*time;
         count++;
     }
-    Console.Write(count);
+    Console.Write($"Собака пробежала {count} раз");
+    //Console.WriteLine($"a = {a}  b = {b}");
