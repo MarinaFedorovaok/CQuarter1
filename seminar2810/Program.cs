@@ -5,30 +5,30 @@
 //     Console.Write(arr[index]);
 //     index++;
 
-// }
+// // }
 void DrawRetangle(int posX, int posY, int wight, int hight)
 {
    int row = 0;
    while (row< hight)
    {
-       Console.SetCursorPosition(posX, posY + row);
+    //    Console.SetCursorPosition(posX, posY + row);
        int count = 0;
        while (count<wight)
        {
-           Console.Write("+");
+           Console.Out.Write("+");
             count++;
        }
         row++;
-
+        Console.Out.Write("\n");
    }
 
-    Console.SetCursorPosition(posX, posY);
-    Console.WriteLine("+");
+    //Console.SetCursorPosition(posX, posY);
+    
 
 }
-Console.Clear();
+//Console.Clear();
 DrawRetangle(5, 3,9,4);
-Console.ReadLine();
+// Console.ReadLine();
 
 // x^2+bx+c=0
 // //A*x^2+b*x+c=0
@@ -54,3 +54,29 @@ Console.ReadLine();
 //     }
 // }
 // Solve(1, -7, 6);
+
+
+//Try to make file
+
+
+// void DrawRectangle(int wight, int hight)
+// {
+//    int row = 0;
+//    while (row < hight)
+//    {
+//        int count = 0;
+//        while (count < wight)
+//        {
+//            System.Console.Out.Write ("*");
+//             count++;
+//        }
+//        row++;
+// 	System.Console.Out.WriteLine(""); 
+//    }
+// }
+
+
+// int wight = 30;
+// int hight = 10;
+
+// DrawRectangle(wight, hight);
