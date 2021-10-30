@@ -1,3 +1,15 @@
 */bin/
 */obj/
 obj/
+*/example 009/example 009.csproj
+*/example002_hello/name.txt
+*/example10/example10.csproj
+*/condition2/bin/
+*/condition2/condition2.csproj
+*/condition3.csproj
+*/seminar3010.csproj
+*/example 009/example 009.csproj
+       */example10/example10.csproj
+        */bin/
+        */condition3.csproj
+        */.gitignore
