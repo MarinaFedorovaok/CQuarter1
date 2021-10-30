@@ -39,16 +39,23 @@ while (index <10)
     index++;
 }
 Console.WriteLine("*");
+// index = 0;
+// B [index]=A [index];
+// Console.WriteLine(B[index]);
 index = 0;
-int indexb = 0;
  while (index < 10)
 {
     if (A[index] < A[index+1])
     {
-        B [index]=A [index];
-    }
+        B[index]=A[index];
+        B[index+1] = A[index+1];
         Console.WriteLine(B[index]);
-        index++;
+        Console.WriteLine(B[index+1]);
+        index=index+1;
+
+    }
+       
+        index=index+1;
     }
 
 
