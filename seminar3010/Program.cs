@@ -7,7 +7,7 @@
 
 //     i += 2;
 //     Console.WriteLine (i);
-
+//
 // // }
 
 // int [] arr = new int[] {1, 2, 3, 8, 12 }
@@ -21,15 +21,16 @@
 // возрастания
 // элементы, больше 8
 // знакочередования
+                // Версия с 1 индексом
 
 // int [] A = new int [10];
 // int index = 0;
 // while (index < 10)
 // {
 //     A[index] = new Random().Next(10, 100);
+//     Console.WriteLine(A[index]);
 //     index++;
 // }
-// //int [] B = new int [10];
 
 // index = 0;
 // while (index <10)
@@ -38,7 +39,9 @@
 //     Console.WriteLine(A[index]);
 //     index++;
 // }
+
 // Console.WriteLine("******");
+// int [] B = new int [10];
 // index = 0;
 // B [index]=A [index];
 // Console.WriteLine(B[index]);
@@ -71,6 +74,7 @@
 //         }
 //         index++;
 // }
+                // Версия с 2 индексами
 
 int [] A = new int [10];
 int index = 0;
@@ -93,12 +97,21 @@ while (indexA< 10)
      if (A[indexA] < A[indexA+1])
      {
          B[indexB]=A[indexA];
-        Console.WriteLine(B[indexB]);
-        // B[indexB+1] = A[indexA+1];
-        // Console.WriteLine(B[indexB+1]);
-        indexB=indexB+1;
+         Console.WriteLine(B[indexB]);
+        //  B[indexB+1] = A[indexA+1];
+        //  Console.WriteLine(B[indexB+1]);
+         indexB=indexB+1;
+         indexA++;
+
+       }
+
+          indexA++;
+         
 
     }
-       
-         indexA++;
-     }
+     B[0]=A[0];
+        Console.WriteLine(B[0]);
+// indexB = 0;
+// indexA = 0;
+// B[indexB]=A[indexA];
+// Console.WriteLine(B[indexB]);
