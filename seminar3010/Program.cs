@@ -22,41 +22,42 @@
 // элементы, больше 8
 // знакочередования
 
-int [] A = new int [10];
-int index = 0;
-while (index < 10)
-{
-    A[index] = new Random().Next(10, 100);
-    index++;
-}
-int [] B = new int [10];
+// int [] A = new int [10];
+// int index = 0;
+// while (index < 10)
+// {
+//     A[index] = new Random().Next(10, 100);
+//     index++;
+// }
+// //int [] B = new int [10];
 
-index = 0;
-while (index <10)
-{
-    int val = A[index];
-    Console.WriteLine(A[index]);
-    index++;
-}
-Console.WriteLine("*");
+// index = 0;
+// while (index <10)
+// {
+//     int val = A[index];
+//     Console.WriteLine(A[index]);
+//     index++;
+// }
+// Console.WriteLine("******");
 // index = 0;
 // B [index]=A [index];
 // Console.WriteLine(B[index]);
-index = 0;
- while (index < 10)
-{
-    if (A[index] < A[index+1])
-    {
-        B[index]=A[index];
-        B[index+1] = A[index+1];
-        Console.WriteLine(B[index]);
-        Console.WriteLine(B[index+1]);
-        index=index+1;
 
-    }
+// index = 0;
+//  while (index < 10)
+// {
+//     if (A[index] < A[index+1])
+//     {
+//         B[index]=A[index];
+//         B[index+1] = A[index+1];
+//         Console.WriteLine(B[index]);
+//         Console.WriteLine(B[index+1]);
+//         index=index+1;
+
+//     }
        
-        index=index+1;
-    }
+//         index=index+1;
+//     }
 
 
 // int find = 143;
@@ -70,3 +71,34 @@ index = 0;
 //         }
 //         index++;
 // }
+
+int [] A = new int [10];
+int index = 0;
+while (index < 10)
+{
+    A[index] = new Random().Next(10, 100);
+    Console.WriteLine(A[index]);
+    index++;
+}
+
+Console.WriteLine("*****");
+
+int [] B = new int [10];
+
+int indexA = 0;
+int indexB = 0;
+while (indexA< 10)
+{
+    
+     if (A[indexA] < A[indexA+1])
+     {
+         B[indexB]=A[indexA];
+        Console.WriteLine(B[indexB]);
+        // B[indexB+1] = A[indexA+1];
+        // Console.WriteLine(B[indexB+1]);
+        indexB=indexB+1;
+
+    }
+       
+         indexA++;
+     }
