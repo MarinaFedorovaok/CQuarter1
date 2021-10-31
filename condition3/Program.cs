@@ -13,19 +13,34 @@ while (index < 10)
     Console.WriteLine(A[index]);
     index++;
 }
-int [] B = new int [10];
 
 Console.WriteLine("*");
+//Trying to count the amount
+// int count = 0;
+// int amountB = 0;
+// int a = 0;
+// int b = 0;
+// int c = 0;
+// int d = 0;
+// int e = 0;
+// int f = 0;
+// int g = 0;
+// int h = 0;
+// int i = 0;
+// int j = 0;
+// int [] B = new int [amountB] {a, b, c, d, e, f, g, h, i, j};
 
-index = 0;
- while (index < 10)
+int [] B = new int [10];
+int indexA = 0;
+int indexB = 0;
+ while (indexA < 10)
 {
     if (A[index] < 0)
     {
-        B[index]=A[index];
-        Console.WriteLine(B[index]);
-        index=index++;
+        B[indexB]=A[indexA];
+        Console.WriteLine(B[indexB]);
+        indexB++;
 
     }
-       index++;
+       indexA++;
  }
