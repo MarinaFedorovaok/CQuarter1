@@ -85,37 +85,33 @@ while (index < 10)
     index++;
 }
 
-Console.WriteLine("*****");
+Console.WriteLine("*****"); // Здесь все нормально, создали массив А
 
-int [] B = new int [10];
+int [] B = new int [10]; // Создали массив В 
 
 int indexA = 1;
-int indexB = 0;
+int indexB = 0;   // Объявили счетчики для массивов A и B
+
 while (indexA< 10)
 {
     
-     if (A[0] > A[indexA])
+     if (A[0] > A[indexA]) // выясняем, является ли первый элемент массива A самым большим
      {
          B[0]=A[0];
-         Console.WriteLine(B[0]);
+         Console.WriteLine(B[0]); // если он самый большой выводим его в массиве B
          indexA++;
 
        }
-       if (A [indexA-1]<A [indexA])  
+       if (A [indexA-1]<A [indexA])  // если он не самый большой - сравниваем его со следующим
             {
-                B [indexB] = A [indexA-1];
+                B [indexB] = A [indexA-1]; // если первый элемент меньше - выводим его в массиве B
                 Console.WriteLine(B[indexB]);
                 indexA++;
                 indexB++;
 
             }
-            indexA++;
+            indexA++; // если не меньше - проверяем следующий элемент массива
 
 
      }
-    //  B[0]=A[0];
-    //  Console.WriteLine(B[0]);
-// indexB = 0;
-// indexA = 0;
-// B[indexB]=A[indexA];
-// Console.WriteLine(B[indexB]);
+   
