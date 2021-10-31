@@ -42,7 +42,7 @@ int [] B = new int [10];
 B[0]=A[0]; 
 Console.WriteLine(B[0]);// выводим первый элемент
 
-index = 0;
+index = 1;
  while (index < 10)
 {
     if (A[0] < A[index])
