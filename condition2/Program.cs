@@ -26,15 +26,30 @@ Console.WriteLine("*");
 // index = 0;
 // B [index]=A [index];
 // Console.WriteLine(B[index]);
-index = 0;
- while (index < 10)
+// index = 0;
+//  while (index < 10)
+// {
+//     if (A[index] < 8)
+//     {
+//         B[index]=A[index];
+//         Console.WriteLine(B[index]);
+//         index=index++;
+
+//     }
+//        index++;
+//  }
+
+
+int indexA = 0;
+int indexB = 0;
+ while (indexA < 10)
 {
-    if (A[index] < 8)
+    if (A[indexA] < 8)
     {
-        B[index]=A[index];
-        Console.WriteLine(B[index]);
-        index=index++;
+        B[indexB]=A[indexA];
+        Console.WriteLine(B[indexB]);
+        indexB++;
 
     }
-       index++;
+       indexA++;
  }
