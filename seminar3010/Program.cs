@@ -89,28 +89,32 @@ Console.WriteLine("*****");
 
 int [] B = new int [10];
 
-int indexA = 0;
+int indexA = 1;
 int indexB = 0;
 while (indexA< 10)
 {
     
-     if (A[indexA] < A[indexA+1])
+     if (A[0] > A[indexA])
      {
-         B[indexB]=A[indexA];
-         Console.WriteLine(B[indexB]);
-        //  B[indexB+1] = A[indexA+1];
-        //  Console.WriteLine(B[indexB+1]);
-         indexB=indexB+1;
+         B[0]=A[0];
+         Console.WriteLine(B[0]);
          indexA++;
 
        }
+       if (A [indexA-1]<A [indexA])  
+            {
+                B [indexB] = A [indexA-1];
+                Console.WriteLine(B[indexB]);
+                indexA++;
+                indexB++;
 
-          indexA++;
-         
+            }
+            indexA++;
 
-    }
-     B[0]=A[0];
-        Console.WriteLine(B[0]);
+
+     }
+    //  B[0]=A[0];
+    //  Console.WriteLine(B[0]);
 // indexB = 0;
 // indexA = 0;
 // B[indexB]=A[indexA];
