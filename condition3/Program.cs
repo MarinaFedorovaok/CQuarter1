@@ -35,7 +35,7 @@ int indexA = 0;
 int indexB = 0;
  while (indexA < 10)
 {
-    if (A[index] < 0)
+    if (A[indexA] < 0)
     {
         B[indexB]=A[indexA];
         Console.WriteLine(B[indexB]);
