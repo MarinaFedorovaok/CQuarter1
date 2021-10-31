@@ -15,7 +15,7 @@ while (index < 10)
 }
 
 Console.WriteLine("*");
-//Trying to count the amount
+                    //Trying to count the amount
 // int count = 0;
 // int amountB = 0;
 // int a = 0;
