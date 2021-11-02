@@ -26,17 +26,30 @@
 
         // Метод4 -возвращает и принимает
 
-string Method4 (int count, string c)
-  {
-      int i = 0;
-      string result = String.Empty;
-      while(i < count)
-      {
-          result = result+c;
-           i++;
-        }
-     return result;
- }
+// string Method4 (int count, string c)
+//   {
+//       int i = 0;
+//       string result = String.Empty;
+//       while(i < count)
+//       {
+//           result = result+c;
+//            i++;
+//         }
+//      return result;
+//  }
 
-string res = Method4 (count: 10, c: "z");
-Console.WriteLine (res);
+// string res = Method4 (count: 10, c: "z");
+// Console.WriteLine (res);
+
+                    // Циклы. Таблицы умножения.
+
+for (int i = 0; i<=10; i++)
+    {
+        for (int j = 2; j <=10; j++)
+            {
+                Console.WriteLine($"{i}*{j}={i*j}");
+
+            }
+            Console.WriteLine();
+    }
+
