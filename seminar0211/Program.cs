@@ -53,3 +53,21 @@ for (int i = 0; i<=10; i++)
             Console.WriteLine();
     }
 
+        // Замена элементов текста
+      
+    string Replace (string text, char oldValue, char newValue) //(Сhar) — тип данных, предназначенный для хранения одного символа (управляющего или печатного) в определённой кодировке. Может являться как однобайтовым (для стандартной таблицы символов), так и многобайтовым (к примеру, для Юникода). Основным применением является обращение к отдельным знакам строки.
+    {
+      
+        string result = String.Empty;
+        int length = text.Length;
+        for (int i = 0; 1<length; i++)
+        {
+            if(text[i]==oldValue) result = result + $"{newValue}";
+            else result = result + $"{text[i]}";
+
+        }
+
+    }
+  string text = "Я к вам пишу — чего же боле? Что я могу ещё сказать?";
+    string newText = Replace(text, ' ', '|');
+    Console.WriteLine(newText);
