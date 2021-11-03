@@ -41,33 +41,43 @@
 // string res = Method4 (count: 10, c: "z");
 // Console.WriteLine (res);
 
-                    // Циклы. Таблицы умножения.
+//                     // Циклы. Таблицы умножения.
 
-for (int i = 0; i<=10; i++)
-    {
-        for (int j = 2; j <=10; j++)
-            {
-                Console.WriteLine($"{i}*{j}={i*j}");
+// for (int i = 0; i<=10; i++)
+//     {
+//         for (int j = 2; j <=10; j++)
+//             {
+//                 Console.WriteLine($"{i}*{j}={i*j}");
 
-            }
-            Console.WriteLine();
-    }
+//             }
+//             Console.WriteLine();
+   // }
 
-        // Замена элементов текста
-      
+       // Замена элементов текста
+    string text = "We go together";
+
     string Replace (string text, char oldValue, char newValue) //(Сhar) — тип данных, предназначенный для хранения одного символа (управляющего или печатного) в определённой кодировке. Может являться как однобайтовым (для стандартной таблицы символов), так и многобайтовым (к примеру, для Юникода). Основным применением является обращение к отдельным знакам строки.
     {
       
         string result = String.Empty;
         int length = text.Length;
-        for (int i = 0; 1<length; i++)
+        for (int i = 0; i < length; i=i+1)
         {
-            if(text[i]==oldValue) result = result + $"{newValue}";
+            if(text[i] == oldValue) result = result + $"{newValue}";
             else result = result + $"{text[i]}";
 
         }
-
+    return result;
     }
-  string text = "Я к вам пишу — чего же боле? Что я могу ещё сказать?";
+  
     string newText = Replace(text, ' ', '|');
     Console.WriteLine(newText);
+
+                // Возвращает квардрат числа
+        //  int m(int a)   
+        //  {
+        //      int result = a*a;
+        //      return result;
+        //  }
+        //  int res = m(5);
+        //  Console.Write(res);
