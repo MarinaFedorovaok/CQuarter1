@@ -85,48 +85,55 @@
             
             // Sorting arrang
 
-    int[] Arr = {1, 3, 4, 56, 32, 25, 34, 5, 3};
+//     int[] Arr = {1, 3, 4, 56, 32, 25, 34, 5, 3};
 
-void PrintArray (int[] array)
+// void PrintArray (int[] array)
 
-{
- int count = array.Length;
- int length = Arr.Length;
+// {
+//  int count = array.Length;
+//  int length = Arr.Length;
 
- for (int i =0; i < length; i++)
+//  for (int i =0; i < length; i++)
 
-    {
-        Console.WriteLine($"{array[i]}");
-    }
-    Console.WriteLine();
+//     {
+//         Console.WriteLine($"{array[i]}");
+//     }
+//     Console.WriteLine();
 
-}
+// }
 
-void SelectoinSort(int[] array)
-{
+// void SelectoinSort(int[] array)
+// {
 
-    for (int i=0; i<array.Length - 1 ; i++)
-    {
-        int maxPosition = i;
+//     for (int i=0; i<array.Length - 1 ; i++)
+//     {
+//         int maxPosition = i;
 
-         for (int j=i+1; j<array.Length; j++)
+//          for (int j=i+1; j<array.Length; j++)
 
+//          {
+//             if(array[j]> array[maxPosition]) maxPosition = j;
+
+//          }
+
+//         //
+//         int temp = array[i];
+//         array[i] = array[maxPosition];
+//         array[maxPosition] = temp;
+
+//     }
+
+// }
+
+// PrintArray(Arr);
+// SelectoinSort(Arr);
+// PrintArray(Arr);
+
+
+        /// Квардат числа сокращенный
+        int m(int a)   
          {
-            if(array[j]> array[maxPosition]) maxPosition = j;
-
+                          return (a*a);
          }
-
-        //
-        int temp = array[i];
-        array[i] = array[maxPosition];
-        array[maxPosition] = temp;
-
-    }
-
-}
-
-PrintArray(Arr);
-SelectoinSort(Arr);
-PrintArray(Arr);
-
-
+         int res = m(5);
+         Console.Write(res);
