@@ -54,24 +54,24 @@
    // }
 
        // Замена элементов текста
-    string text = "We go together";
+    // string text = "We go together";
 
-    string Replace (string text, char oldValue, char newValue) //(Сhar) — тип данных, предназначенный для хранения одного символа (управляющего или печатного) в определённой кодировке. Может являться как однобайтовым (для стандартной таблицы символов), так и многобайтовым (к примеру, для Юникода). Основным применением является обращение к отдельным знакам строки.
-    {
+    // string Replace (string text, char oldValue, char newValue) //(Сhar) — тип данных, предназначенный для хранения одного символа (управляющего или печатного) в определённой кодировке. Может являться как однобайтовым (для стандартной таблицы символов), так и многобайтовым (к примеру, для Юникода). Основным применением является обращение к отдельным знакам строки.
+    // {
       
-        string result = String.Empty;
-        int length = text.Length;
-        for (int i = 0; i < length; i=i+1)
-        {
-            if(text[i] == oldValue) result = result + $"{newValue}";
-            else result = result + $"{text[i]}";
+    //     string result = String.Empty;
+    //     int length = text.Length;
+    //     for (int i = 0; i < length; i=i+1)
+    //     {
+    //         if(text[i] == oldValue) result = result + $"{newValue}";
+    //         else result = result + $"{text[i]}";
 
-        }
-    return result;
-    }
+    //     }
+    // return result;
+    // }
   
-    string newText = Replace(text, ' ', '|');
-    Console.WriteLine(newText);
+    // string newText = Replace(text, ' ', '|');
+    // Console.WriteLine(newText);
 
                 // Возвращает квардрат числа
         //  int m(int a)   
@@ -81,3 +81,27 @@
         //  }
         //  int res = m(5);
         //  Console.Write(res);
+            
+            
+            // Sorting arrang
+
+    int[] Arr = {1, 3, 4, 56, 32, 25, 34, 5, 3};
+
+void PrintArray (int[] array)
+
+{
+ int count = array.Length;
+ int length = Arr.Length;
+
+ for (int i =0; i < length; i++)
+
+    {
+        Console.WriteLine($"{array[i]}");
+    }
+    Console.WriteLine();
+
+}
+PrintArray(Arr);
+
+
+
