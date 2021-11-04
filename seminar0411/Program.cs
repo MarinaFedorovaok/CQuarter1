@@ -72,14 +72,27 @@
 // Console.Write(ans);
 
     //  5. Написать программу вычисления значения функции y=f(a)
-    double f(double a)
+    // double f(double a)
+    // {
+    //     double res = Math.Sin (a);
+    //     return res;
+    // }
+    // double sin = f(2);
+    // Console.Write(sin);
+
+    //  6. Выяснить является ли число чётным
+    void func6 (int a)
     {
-        double res = Math.Sin (a);
-        return res;
-    }
-    double sin = f(3);
-    Console.Write(sin);
-//  6. Выяснить является ли число чётным
+        if (a % 2 ==0)
+        {
+            Console.Write ($"{a}  является четным");
+        }
+        else {
+        Console.Write ($"{a}  не является четным");
+
+        }
+     }
+    func6 (6);
 //  7. Показать числа от -N до N
 //  8. Показать четные числа от 1 до N
 //  9. Показать последнюю цифру трёхзначного числа
