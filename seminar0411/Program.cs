@@ -94,13 +94,22 @@
     //  }
     // func6 (6);
                 //  7. Показать числа от -N до N
-    int N = Convert.ToInt32(Console.ReadLine());
-      for (int x = -N; x<=N; x++) 
-    {
-        Console.WriteLine(x);
-    }
+    // int N = Convert.ToInt32(Console.ReadLine());
+    //   for (int x = -N; x<=N; x++) 
+    // {
+    //     Console.WriteLine(x);
+    // }
    
-//  8. Показать четные числа от 1 до N
+        //  8. Показать четные числа от 1 до N
+   int N = Convert.ToInt32(Console.ReadLine());
+     for (int x = 0; x<=N; x++) 
+    {
+         if (x % 2 ==0)
+           {
+               Console.WriteLine (x);
+       }
+    
+     } 
 //  9. Показать последнюю цифру трёхзначного числа
 // 10. Показать вторую цифру трёхзначного числа
 // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
