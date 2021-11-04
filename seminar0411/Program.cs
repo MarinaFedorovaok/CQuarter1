@@ -45,13 +45,31 @@
 // func2 (56, 38);
 
         //  3. По заданному номеру дня недели вывести его название
-void week (int a)
+// void week (int a)
+// {
+// string []array1 = {"mon", "tue", "Wen", "Thur", "Try", "Sut", "Syn"};
+// Console.WriteLine (array1[a-1]);
+// }
+// week (2);
+    //  4. Найти максимальное из трех чисел
+
+int Max (int a, int b, int c)
 {
-string []array1 = {"mon", "tue", "Wen", "Thur", "Try", "Sut", "Syn"};
-Console.WriteLine (array1[a]);
+    int max = b;
+    if (a>max)
+    {
+        max=a;
+       
+    }
+    if (c>max)
+        {
+            max=c;
+            
+        }
+    return max;
 }
-week (2);
-//  4. Найти максимальное из трех чисел
+int ans = Max (12,5,6);
+Console.Write(ans);
 //  5. Написать программу вычисления значения функции y=f(a)
 //  6. Выяснить является ли число чётным
 //  7. Показать числа от -N до N
