@@ -112,18 +112,30 @@
 //      } 
         //  9. Показать последнюю цифру трёхзначного числа
 // int N = Convert.ToInt32(Console.ReadLine());
-// int a= N/10;
-// int b= N-a*10;
-// Console.WriteLine(b);
+// int a= N%10;
+// Console.WriteLine(a);
 
 
         // 10. Показать вторую цифру трёхзначного числа
-int N = Convert.ToInt32(Console.ReadLine());
-int a= N/100;
-int c = N%10;
-int b= (N-a*100 - c)/10;
-Console.WriteLine(b);
-// 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
+// int N = Convert.ToInt32(Console.ReadLine());
+// int a= N/100;
+// int c = N%10;
+// int b= (N-a*100 - c)/10;
+// Console.WriteLine(b);
+    
+    // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
+    
+int N = 98;
+int a = N/10;
+int b = N%10;
+if (a>b)
+{
+    Console.WriteLine(a);
+}
+else
+    Console.WriteLine(b);
+   
+
 // 12. Удалить вторую цифру трёхзначного числа
 // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
 // 14. Найти третью цифру числа или сообщить, что её нет
