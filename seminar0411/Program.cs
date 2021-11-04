@@ -53,24 +53,32 @@
 // week (2);
     //  4. Найти максимальное из трех чисел
 
-int Max (int a, int b, int c)
-{
-    int max = b;
-    if (a>max)
-    {
-        max=a;
+// int Max (int a, int b, int c)
+// {
+//     int max = b;
+//     if (a>max)
+//     {
+//         max=a;
        
-    }
-    if (c>max)
-        {
-            max=c;
+//     }
+//     if (c>max)
+//         {
+//             max=c;
             
-        }
-    return max;
-}
-int ans = Max (12,5,6);
-Console.Write(ans);
-//  5. Написать программу вычисления значения функции y=f(a)
+//         }
+//     return max;
+// }
+// int ans = Max (12,5,6);
+// Console.Write(ans);
+
+    //  5. Написать программу вычисления значения функции y=f(a)
+    double f(double a)
+    {
+        double res = Math.Sin (a);
+        return res;
+    }
+    double sin = f(3);
+    Console.Write(sin);
 //  6. Выяснить является ли число чётным
 //  7. Показать числа от -N до N
 //  8. Показать четные числа от 1 до N
