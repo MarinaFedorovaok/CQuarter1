@@ -101,16 +101,22 @@
     // }
    
         //  8. Показать четные числа от 1 до N
-   int N = Convert.ToInt32(Console.ReadLine());
-     for (int x = 0; x<=N; x++) 
-    {
-         if (x % 2 ==0)
-           {
-               Console.WriteLine (x);
-       }
+//    int N = Convert.ToInt32(Console.ReadLine());
+//      for (int x = 0; x<=N; x++) 
+//     {
+//          if (x % 2 ==0)
+//            {
+//                Console.WriteLine (x);
+//        }
     
-     } 
-//  9. Показать последнюю цифру трёхзначного числа
+//      } 
+        //  9. Показать последнюю цифру трёхзначного числа
+int N = Convert.ToInt32(Console.ReadLine());
+int a= N/10;
+int b= N-a*10;
+Console.WriteLine(b);
+
+
 // 10. Показать вторую цифру трёхзначного числа
 // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
 // 12. Удалить вторую цифру трёхзначного числа
