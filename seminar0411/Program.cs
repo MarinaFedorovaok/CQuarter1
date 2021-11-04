@@ -29,21 +29,28 @@
 
 // int a = 3;
 // int b = 4;
-void func2 (int a, int b)
+// void func2 (int a, int b)
+// {
+//     if (a>b)
+//     {
+//         Console.WriteLine ($"Большее число {a}");
+//         Console.WriteLine ($"Меньшее число {b}");
+//     }
+//     else
+//     {
+//     Console.WriteLine ($"Большее число {b}");
+//         Console.WriteLine ($"Меньшее число {a}");
+//     }
+// }
+// func2 (56, 38);
+
+        //  3. По заданному номеру дня недели вывести его название
+void week (int a)
 {
-    if (a>b)
-    {
-        Console.WriteLine ($"Большее число {a}");
-        Console.WriteLine ($"Меньшее число {b}");
-    }
-    else
-    {
-    Console.WriteLine ($"Большее число {b}");
-        Console.WriteLine ($"Меньшее число {a}");
-    }
+string []array1 = {"mon", "tue", "Wen", "Thur", "Try", "Sut", "Syn"};
+Console.WriteLine (array1[a]);
 }
-func2 (56, 38);
-//  3. По заданному номеру дня недели вывести его название
+week (2);
 //  4. Найти максимальное из трех чисел
 //  5. Написать программу вычисления значения функции y=f(a)
 //  6. Выяснить является ли число чётным
