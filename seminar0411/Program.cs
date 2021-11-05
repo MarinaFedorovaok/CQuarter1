@@ -161,38 +161,50 @@
 // 16. Дано число обозначающее день недели. Выяснить является номер недели выходным днём
 
 // 17. По двум заданным числам проверять является ли одно квадратом другого
-int function17 (int a, int b)
-{
-    int res=0;
-    if (a>b)
-    {
-       if (a==b*b) res=1;
-    }
-    else
-    {
-      if (b==a*a) res=2;  
+// int function17 (int a, int b)
+// {
+//     int res=0;
+//     if (a>b)
+//     {
+//        if (a==b*b) res=1;
+//     }
+//     else
+//     {
+//       if (b==a*a) res=2;  
 
-    }
-    return res;
-}
-int x = 30;
-int y = 6;
-int ans = function17(x,y);
-//Console.WriteLine(ans);
-if (ans == 0)
-{
-Console.WriteLine("ни одно число не является квадратом другого");
-}
-if (ans == 1)
-{
-Console.WriteLine($"{x} является квадратом {y}");
-}
-if (ans == 2)
-{
-Console.Write($"{y} является квадратом {x}");
-}
-//"${b} является квадратом {a}"
+//     }
+//     return res;
+// }
+// int x = 30;
+// int y = 6;
+// int ans = function17(x,y);
+// //Console.WriteLine(ans);
+// if (ans == 0)
+// {
+// Console.WriteLine("ни одно число не является квадратом другого");
+// }
+// if (ans == 1)
+// {
+// Console.WriteLine($"{x} является квадратом {y}");
+// }
+// if (ans == 2)
+// {
+// Console.Write($"{y} является квадратом {x}");
+// }
+
 // 18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
+bool Func18(bool x, bool y) 
+{ 
+    bool output = false; 
+    if(!(x & y) == !x ^ !y) 
+    { 
+        output = true; 
+    } 
+    return output; 
+} 
+ 
+bool ans = Func18(false, false); 
+Console.WriteLine(ans);
 // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
 // 20. Ввести номер четверти, показать диапазоны для возможных координат
 // 21. Программа проверяет пятизначное число на палиндромом.
