@@ -174,18 +174,20 @@
 int func14(int N)
 {
     int res = 0;
+    while (N>999)
+    {
+        N = N/10;
+    }
+  //  Console.WriteLine(N);
     if (N>99)
     {
-        res = (N/100)%10;
+        res = N%10;
     }
     else Console.WriteLine("третьей цифры нет");
  return res;
 }
-Console.WriteLine(func14(56));
-//  int b = N/100;
-//  int c = b*100;
-//  int d= c+a;
-//  Console.WriteLine(d);
+Console.WriteLine(func14(560576938));
+
 
 // Почувствуй себя джуном
     // 15. Дано число. Проверить кратно ли оно 7 и 23
