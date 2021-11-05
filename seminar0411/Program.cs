@@ -145,31 +145,47 @@
 //  Console.WriteLine(d);
 
     // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
-    int func13(int a, int b)
- {
-   int res = 0;
-   if  ( a>b )
-      {
-        if (a %b ==0) 
-         {       
-           res = 1;
-         }
-         else res = a%b;
-      }
- if  ( b>a )
-      {
-            if (b %a ==0) 
-            {       
-            res = 2;
-            }
-           else  res = b%a;
-      }
- return res;
- }
-int ans = func13(34,68);
-Console.WriteLine(ans);
+//     int func13(int a, int b)
+//  {
+//    int res = 0;
+//    if  ( a>b )
+//       {
+//         if (a %b ==0) 
+//          {       
+//            res = 1;
+//          }
+//          else res = a%b;
+//       }
+//  if  ( b>a )
+//       {
+//             if (b %a ==0) 
+//             {       
+//             res = 2;
+//             }
+//            else  res = b%a;
+//       }
+//  return res;
+//  }
+// int ans = func13(34,68);
+// Console.WriteLine(ans);
 
 // 14. Найти третью цифру числа или сообщить, что её нет
+
+int func14(int N)
+{
+    int res = 0;
+    if (N>99)
+    {
+        res = (N/100)%10;
+    }
+    else Console.WriteLine("третьей цифры нет");
+ return res;
+}
+Console.WriteLine(func14(56));
+//  int b = N/100;
+//  int c = b*100;
+//  int d= c+a;
+//  Console.WriteLine(d);
 
 // Почувствуй себя джуном
     // 15. Дано число. Проверить кратно ли оно 7 и 23
