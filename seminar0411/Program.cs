@@ -171,22 +171,22 @@
 
 // 14. Найти третью цифру числа или сообщить, что её нет
 
-int func14(int N)
-{
-    int res = 0;
-    while (N>999)
-    {
-        N = N/10;
-    }
-  //  Console.WriteLine(N);
-    if (N>99)
-    {
-        res = N%10;
-    }
-    else Console.WriteLine("третьей цифры нет");
- return res;
-}
-Console.WriteLine(func14(560576938));
+// int func14(int N)
+// {
+//     int res = 0;
+//     while (N>999)
+//     {
+//         N = N/10;
+//     }
+//   //  Console.WriteLine(N);
+//     if (N>99)
+//     {
+//         res = N%10;
+//     }
+//     else Console.WriteLine("третьей цифры нет");
+//  return res;
+// }
+// Console.WriteLine(func14(560576938));
 
 
 // Почувствуй себя джуном
@@ -241,18 +241,14 @@ Console.WriteLine(func14(560576938));
 // }
 
 // 18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
-// bool Func18(bool x, bool y) 
-// { 
-//     bool output = false; 
-//     if(!(x & y) == !x ^ !y) 
-//     { 
-//         output = true; 
-//     } 
-//     return output; 
-// } 
- 
-// bool ans = Func18(false, false); 
-// Console.WriteLine(ans);
+bool Func18(bool x, bool y) 
+{ 
+    return (!(x && y) == !x || !y);  
+} 
+Console.WriteLine(Func18(false, false)); 
+Console.WriteLine(Func18(false, true ));
+Console.WriteLine(Func18(true,  false)); 
+Console.WriteLine(Func18(true,  true )); 
 
 // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
 // 20. Ввести номер четверти, показать диапазоны для возможных координат
