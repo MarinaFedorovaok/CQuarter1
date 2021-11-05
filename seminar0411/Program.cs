@@ -137,14 +137,38 @@
    
 
     // 12. Удалить вторую цифру трёхзначного числа
- int N = Convert.ToInt32(Console.ReadLine());
- int a = N%10;
- int b = N/100;
- int c = b*100;
- int d= c+a;
- Console.WriteLine(d);
+//  int N = Convert.ToInt32(Console.ReadLine());
+//  int a = N%10;
+//  int b = N/100;
+//  int c = b*100;
+//  int d= c+a;
+//  Console.WriteLine(d);
 
-// 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
+    // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
+    int func13(int a, int b)
+ {
+   int res = 0;
+   if  ( a>b )
+      {
+        if (a %b ==0) 
+         {       
+           res = 1;
+         }
+         else res = a%b;
+      }
+ if  ( b>a )
+      {
+            if (b %a ==0) 
+            {       
+            res = 2;
+            }
+           else  res = b%a;
+      }
+ return res;
+ }
+int ans = func13(34,68);
+Console.WriteLine(ans);
+
 // 14. Найти третью цифру числа или сообщить, что её нет
 
 // Почувствуй себя джуном
