@@ -1,4 +1,4 @@
-﻿// Почувствуй себя интерном
+// Почувствуй себя интерном
         //  0. Вывести квадрат числа
 // int func (int x)
 // {
@@ -7,6 +7,30 @@
 // int res = func (5);
 // Console.WriteLine(res);
             //  1. По двум заданным числам проверять является ли первое квадратом второго
+bool func28 (int a, int b)
+ {
+   return a == b*b;
+ }
+Console.WriteLine(func28 (25, 5));
+
+
+
+// int func1 (int a, int b)
+//  {
+//      int result = 0;
+//      if (a == b*b)  result = 1;
+//      return result;
+//  }
+//  //Console.WriteLine(func1 (25, 5));
+//  int ans  = func1(25, 5);
+//  if(ans  == 0) Console.WriteLine("Не является");
+//  else
+//  {
+//      Console.WriteLine("Является");
+//  }
+
+// int a = 25;
+// int b = 5;
 
 // void func1 (int a, int b)
 // {
@@ -93,7 +117,22 @@
     //     }
     //  }
     // func6 (6);
-                //  7. Показать числа от -N до N
+               //  7. Показать числа от -N до N
+    //int N = Convert.ToInt32(Console.ReadLine());
+    // int func7 (int N)
+    // {
+    //     int x= -N;
+    //     while (x <=N ) 
+    //    {
+    //        Console.WriteLine (x);
+    //         x++;
+    //    }
+    //     return x;
+    // }
+    // func7(4);
+    // func7 (3);
+   
+
     // int N = Convert.ToInt32(Console.ReadLine());
     //   for (int x = -N; x<=N; x++) 
     // {
@@ -206,8 +245,16 @@
 // int ans = func15(160);
 // Console.WriteLine(ans);
 
-        // 16. Дано число обозначающее день недели. Выяснить является номер недели выходным днём
-
+        // 16. Дано число обозначающее день недели. Выяснить является номер дня недели выходным днём
+// int day (int num)
+// {
+//  int [] array  = {1, 2, 3, 4, 5, 6, 7};
+//  int index = 0;
+//  for (index=0; index<=array.Length; index++)   
+//     {
+//         if ((num - 1)>=array[5]) 
+//     }
+// }
 // 17. По двум заданным числам проверять является ли одно квадратом другого
 // int function17 (int a, int b)
 // {
@@ -241,14 +288,14 @@
 // }
 
 // 18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
-bool Func18(bool x, bool y) 
-{ 
-    return (!(x && y) == !x || !y);  
-} 
-Console.WriteLine(Func18(false, false)); 
-Console.WriteLine(Func18(false, true ));
-Console.WriteLine(Func18(true,  false)); 
-Console.WriteLine(Func18(true,  true )); 
+// bool Func18(bool x, bool y) 
+// { 
+//     return (!(x && y) == !x || !y);  
+// } 
+// Console.WriteLine(Func18(false, false)); 
+// Console.WriteLine(Func18(false, true ));
+// Console.WriteLine(Func18(true,  false)); 
+// Console.WriteLine(Func18(true,  true )); 
 
 // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
 // 20. Ввести номер четверти, показать диапазоны для возможных координат
