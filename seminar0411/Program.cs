@@ -7,11 +7,11 @@
 // int res = func (5);
 // Console.WriteLine(res);
             //  1. По двум заданным числам проверять является ли первое квадратом второго
-bool func28 (int a, int b)
- {
-   return a == b*b;
- }
-Console.WriteLine(func28 (25, 5));
+// bool func28 (int a, int b)
+//  {
+//    return a == b*b;
+//  }
+// Console.WriteLine(func28 (25, 5));
 
 
 
@@ -246,6 +246,14 @@ Console.WriteLine(func28 (25, 5));
 // Console.WriteLine(ans);
 
         // 16. Дано число обозначающее день недели. Выяснить является номер дня недели выходным днём
+
+// bool Day (int num)
+// {
+//     return num > 5;
+// }
+// Console.WriteLine(Day(4));
+
+
 // int day (int num)
 // {
 //  int [] array  = {1, 2, 3, 4, 5, 6, 7};
@@ -298,6 +306,17 @@ Console.WriteLine(func28 (25, 5));
 // Console.WriteLine(Func18(true,  true )); 
 
 // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
+int func19 (int x, int  y)
+{ int ans = 4;
+    if (x>0&&y>0) ans = 1;
+    if (x<0&&y>0) ans = 2;
+    if (x<0&&y<0) ans = 3;
+return ans;
+}
+Console.WriteLine(func19(-34,-76));
+
+
+
 // 20. Ввести номер четверти, показать диапазоны для возможных координат
 // 21. Программа проверяет пятизначное число на палиндромом.
 // 22. Найти расстояние между точками в пространстве 2D/3D
