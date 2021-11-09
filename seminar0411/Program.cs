@@ -50,6 +50,11 @@
 
 
     //  2. Даны два числа. Показать большее и меньшее число
+    // Решение Сергея
+// int Max2(int first, int second) => first > second ? first : second; 
+// int Min2(int fir, int sec) => fir < sec ? fir : sec; 
+ 
+// (int min, int max) MinMax(int f, int s) => f > s ? (f, s) : (s, f);
 
 // int a = 3;
 // int b = 4;
@@ -358,19 +363,19 @@
 // Почувствуй себя мидлом
 // 23. Показать таблицу квадратов чисел от 1 до N 
 // 24. Найти кубы чисел от 1 до N
-string func24 (int n)
-{   
-    string text = "All is OK";
-    int i = 1;
-    while (i<=n)
-    {
+// string func24 (int n)
+// {   
+//     string text = "All is OK";
+//     int i = 1;
+//     while (i<=n)
+//     {
          
-        Console.WriteLine (Math.Pow(i, 3));
-         i++;
-    }
-      return text;
-}
-Console.WriteLine(func24(5));
+//         Console.WriteLine (Math.Pow(i, 3));
+//          i++;
+//     }
+//       return text;
+// }
+// Console.WriteLine(func24(5));
 
 // 25. Найти сумму чисел от 1 до А
 // 26. Возведите число А в натуральную степень B используя цикл
