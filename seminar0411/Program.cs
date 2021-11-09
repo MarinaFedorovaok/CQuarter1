@@ -362,6 +362,19 @@
 // Console.WriteLine(func22(-3,-4,-7,-8));
 // Почувствуй себя мидлом
 // 23. Показать таблицу квадратов чисел от 1 до N 
+double[] FuncPow(int n) 
+{ 
+    double [] array = new double [n]; 
+    for(int i = 1; i <= n; i++) 
+    { 
+        array[i - 1] = Math.Pow(i, 3); 
+    } 
+    return array; 
+} 
+ 
+double [] Cube = FuncPow(5); 
+ 
+for(int index = 0; index < Cube.Length; index++) Console.WriteLine(Cube[index]);
 // 24. Найти кубы чисел от 1 до N
 // string func24 (int n)
 // {   
