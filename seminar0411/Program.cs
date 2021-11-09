@@ -332,13 +332,14 @@
 
 // 21. Программа проверяет пятизначное число на палиндромом.
 
-// Разбиваем число на цифры
-bool func21 (int a)
-{
-    return (a%10==a/10000 && a/10%10==a/1000%10);
 
-}
-Console.WriteLine(func21 (23435));
+// bool func21 (int a)
+// {
+//     return (a%10==a/10000 && a/10%10==a/1000%10);
+
+// }
+// Console.WriteLine(func21 (23435));
+// Разбиваем число на цифры
 // {
 // for (int i = 0; i<5; i++)
 // {
@@ -349,3 +350,8 @@ Console.WriteLine(func21 (23435));
 // }
 
 // 22. Найти расстояние между точками в пространстве 2D/3D
+double func22 (int x1, int y1, int x2, int y2)
+{
+  return Math.Sqrt(Math.Pow(x2-x1,2)+Math.Pow(y2-y1,2));
+}
+Console.WriteLine(func22(-3,-4,-7,-8));
