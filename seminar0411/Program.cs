@@ -450,21 +450,29 @@
 
         // 29. Написать программу вычисления произведения чисел от 1 до N
 
-        int func29(int N)
-{
-        int multiplication = 1;
-        for (int i = 1; i <= N; i++) multiplication=i*multiplication;
-       return multiplication;
-}
-Console.WriteLine (func29(12));
-// m i
-// 1  1
-//  2  2  
-// 
-// 
-// 
+//         int func29(int N)
+// {
+//         int multiplication = 1;
+//         for (int i = 1; i <= N; i++) multiplication=i*multiplication;
+//        return multiplication;
+// }
+// Console.WriteLine (func29(12));
 
-// 30. Показать кубы чисел, заканчивающихся на четную цифру
+
+// 30. Показать кубы чисел от 0 до N, заканчивающихся на четную цифру
+ int func30(int N)
+{
+        int cube = 2;
+        int i = 2;
+        while (i <= N)
+        {
+        cube=i*i*i;
+        i= i+2;
+        Console.WriteLine(cube);
+        }
+       return cube;
+}
+func30(12);
 
 // Почувствуй себя сеньором
 // 31. Задать массив из 8 элементов и вывести их на экран 
