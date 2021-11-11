@@ -362,19 +362,19 @@
 // Console.WriteLine(func22(-3,-4,-7,-8));
 // Почувствуй себя мидлом
 // 23. Показать таблицу квадратов чисел от 1 до N 
-double[] FuncPow(int n) 
-{ 
-    double [] array = new double [n]; 
-    for(int i = 1; i <= n; i++) 
-    { 
-        array[i - 1] = Math.Pow(i, 3); 
-    } 
-    return array; 
-} 
+// double[] FuncPow(int n) 
+// { 
+//     double [] array = new double [n]; 
+//     for(int i = 1; i <= n; i++) 
+//     { 
+//         array[i - 1] = Math.Pow(i, 2); 
+//     } 
+//     return array; 
+// } 
  
-double [] Cube = FuncPow(5); 
+// double [] Cube = FuncPow(14); 
  
-for(int index = 0; index < Cube.Length; index++) Console.WriteLine(Cube[index]);
+// for(int index = 0; index < Cube.Length; index++) Console.WriteLine(Cube[index]);
 // 24. Найти кубы чисел от 1 до N
 // string func24 (int n)
 // {   
@@ -391,6 +391,14 @@ for(int index = 0; index < Cube.Length; index++) Console.WriteLine(Cube[index]);
 // Console.WriteLine(func24(5));
 
 // 25. Найти сумму чисел от 1 до А
+int func25 (int n)
+{
+// {   n=1;
+    // for(int i=0; i<=n; i++)
+     n = n * (n+1)/ 2;
+    return n;
+}
+Console.Write(func25(3));
 // 26. Возведите число А в натуральную степень B используя цикл
 // 27. Определить количество цифр в числе
 // 28. Подсчитать сумму цифр в числе
