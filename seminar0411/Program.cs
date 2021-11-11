@@ -420,46 +420,34 @@
 
 // 28. Подсчитать сумму цифр в числе
 
-int func28(int N)
-{
-    // string a = Convert.ToString(N);
-    // int x = a.Length;
-    int summ = 0;
-    // for (int i = 0; i < x; i++)
-    while (N!=0)
-    {
-        summ = summ + N % 10;
-        N = N / 10;
-    }
-    return summ;
-}
-Console.WriteLine (func28(3478));
-
-// int func27 (int N)
-// {   string a = Convert.ToString(N);
-//     int x = a.Length;
-
-// int result = a[0];
-// // for (int i = 0; i<x; i++)
-// //     {
-
-
-// //     }
-
-
-//     return result;
+// int func28(int N)
+// {
+//     // string a = Convert.ToString(N);
+//     // int x = a.Length;
+//     int summ = 0;
+//     // for (int i = 0; i < x; i++)
+//     while (N!=0)
+//     {
+//         summ = summ + N % 10;
+//         N = N / 10;
+//     }
+//     return summ;
 // }
-// Console.WriteLine(func27(345));
+
+// N 12345  o  summ
+//   1234   5  5
+//   123    4  9
+//   12     3  12
+//   1      2  14
+//   0      1  15
+string str = "Нужно ли сейчас использовать тип данных char?";
+char c = str[2];
+Console.WriteLine(c);
 
 
+//Console.WriteLine (func28(3478));
 
-// Console.WriteLine(c);
-
-// char q = 'q'; Console.WriteLine(q);
-// q = '\x34'; Console.WriteLine(q);
-// q = Convert.ToChar(52); Console.WriteLine(q);
-
-// 29. Написать программу вычисления произведения чисел от 1 до N
+        // 29. Написать программу вычисления произведения чисел от 1 до N
 // 30. Показать кубы чисел, заканчивающихся на четную цифру
 
 // Почувствуй себя сеньором
