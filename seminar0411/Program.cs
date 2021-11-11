@@ -422,10 +422,11 @@
 
 int func28(int N)
 {
-    string a = Convert.ToString(N);
-    int x = a.Length;
+    // string a = Convert.ToString(N);
+    // int x = a.Length;
     int summ = 0;
-    for (int i = 0; i < x; i++)
+    // for (int i = 0; i < x; i++)
+    while (N!=0)
     {
         summ = summ + N % 10;
         N = N / 10;
