@@ -433,6 +433,7 @@
 //     }
 //     return summ;
 // }
+//Console.WriteLine (func28(3478));
 
 // N 12345  o  summ
 //   1234   5  5
@@ -440,14 +441,29 @@
 //   12     3  12
 //   1      2  14
 //   0      1  15
-string str = "Нужно ли сейчас использовать тип данных char?";
-char c = str[2];
-Console.WriteLine(c);
+                                    
+                                    //Char
+// string str = "Нужно ли сейчас использовать тип данных char?";
+// char c = str[2];
+// Console.WriteLine(c);
 
-
-//Console.WriteLine (func28(3478));
 
         // 29. Написать программу вычисления произведения чисел от 1 до N
+
+        int func29(int N)
+{
+        int multiplication = 1;
+        for (int i = 1; i <= N; i++) multiplication=i*multiplication;
+       return multiplication;
+}
+Console.WriteLine (func29(12));
+// m i
+// 1  1
+//  2  2  
+// 
+// 
+// 
+
 // 30. Показать кубы чисел, заканчивающихся на четную цифру
 
 // Почувствуй себя сеньором
