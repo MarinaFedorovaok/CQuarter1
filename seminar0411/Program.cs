@@ -391,15 +391,25 @@
 // Console.WriteLine(func24(5));
 
 // 25. Найти сумму чисел от 1 до А
-int func25 (int n)
-{
-// {   n=1;
-    // for(int i=0; i<=n; i++)
-     n = n * (n+1)/ 2;
-    return n;
-}
-Console.Write(func25(3));
+// int func25 (int n)
+// {
+
+//      n = n * (n+1)/ 2;
+//     return n;
+// }
+// Console.Write(func25(5));
 // 26. Возведите число А в натуральную степень B используя цикл
+int func26 (int A, int B)
+{
+    int result = 1;
+    for (int i = 1; i < B; i++) 
+    {
+        result = result * A;
+    } 
+    return result;
+}
+Console.WriteLine(func26(3, 4));
+
 // 27. Определить количество цифр в числе
 // 28. Подсчитать сумму цифр в числе
 // 29. Написать программу вычисления произведения чисел от 1 до N
