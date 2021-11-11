@@ -1,12 +1,12 @@
 // Почувствуй себя интерном
-        //  0. Вывести квадрат числа
+//  0. Вывести квадрат числа
 // int func (int x)
 // {
 // return x*x;
 // 
 // int res = func (5);
 // Console.WriteLine(res);
-            //  1. По двум заданным числам проверять является ли первое квадратом второго
+//  1. По двум заданным числам проверять является ли первое квадратом второго
 // bool func28 (int a, int b)
 //  {
 //    return a == b*b;
@@ -49,11 +49,11 @@
 
 
 
-    //  2. Даны два числа. Показать большее и меньшее число
-    // Решение Сергея
+//  2. Даны два числа. Показать большее и меньшее число
+// Решение Сергея
 // int Max2(int first, int second) => first > second ? first : second; 
 // int Min2(int fir, int sec) => fir < sec ? fir : sec; 
- 
+
 // (int min, int max) MinMax(int f, int s) => f > s ? (f, s) : (s, f);
 
 // int a = 3;
@@ -73,14 +73,14 @@
 // }
 // func2 (56, 38);
 
-        //  3. По заданному номеру дня недели вывести его название
+//  3. По заданному номеру дня недели вывести его название
 // void week (int a)
 // {
 // string []array1 = {"mon", "tue", "Wen", "Thur", "Try", "Sut", "Syn"};
 // Console.WriteLine (array1[a-1]);
 // }
 // week (2);
-    //  4. Найти максимальное из трех чисел
+//  4. Найти максимальное из трех чисел
 
 // int Max (int a, int b, int c)
 // {
@@ -88,63 +88,63 @@
 //     if (a>max)
 //     {
 //         max=a;
-       
+
 //     }
 //     if (c>max)
 //         {
 //             max=c;
-            
+
 //         }
 //     return max;
 // }
 // int ans = Max (12,5,6);
 // Console.Write(ans);
 
-    //  5. Написать программу вычисления значения функции y=f(a)
-    // double f(double a)
-    // {
-    //     double res = Math.Sin (a);
-    //     return res;
-    // }
-    // double sin = f(2);
-    // Console.Write(sin);
+//  5. Написать программу вычисления значения функции y=f(a)
+// double f(double a)
+// {
+//     double res = Math.Sin (a);
+//     return res;
+// }
+// double sin = f(2);
+// Console.Write(sin);
 
-    //  6. Выяснить является ли число чётным
-    // void func6 (int a)
-    // {
-    //     if (a % 2 ==0)
-    //     {
-    //         Console.Write ($"{a}  является четным");
-    //     }
-    //     else {
-    //     Console.Write ($"{a}  не является четным");
+//  6. Выяснить является ли число чётным
+// void func6 (int a)
+// {
+//     if (a % 2 ==0)
+//     {
+//         Console.Write ($"{a}  является четным");
+//     }
+//     else {
+//     Console.Write ($"{a}  не является четным");
 
-    //     }
-    //  }
-    // func6 (6);
-               //  7. Показать числа от -N до N
-    //int N = Convert.ToInt32(Console.ReadLine());
-    // int func7 (int N)
-    // {
-    //     int x= -N;
-    //     while (x <=N ) 
-    //    {
-    //        Console.WriteLine (x);
-    //         x++;
-    //    }
-    //     return x;
-    // }
-    // func7(4);
-    // func7 (3);
-   
+//     }
+//  }
+// func6 (6);
+//  7. Показать числа от -N до N
+//int N = Convert.ToInt32(Console.ReadLine());
+// int func7 (int N)
+// {
+//     int x= -N;
+//     while (x <=N ) 
+//    {
+//        Console.WriteLine (x);
+//         x++;
+//    }
+//     return x;
+// }
+// func7(4);
+// func7 (3);
 
-    // int N = Convert.ToInt32(Console.ReadLine());
-    //   for (int x = -N; x<=N; x++) 
-    // {
-    //     Console.WriteLine(x);
-    // }
-   
-        //  8. Показать четные числа от 1 до N
+
+// int N = Convert.ToInt32(Console.ReadLine());
+//   for (int x = -N; x<=N; x++) 
+// {
+//     Console.WriteLine(x);
+// }
+
+//  8. Показать четные числа от 1 до N
 //    int N = Convert.ToInt32(Console.ReadLine());
 //      for (int x = 0; x<=N; x++) 
 //     {
@@ -152,23 +152,23 @@
 //            {
 //                Console.WriteLine (x);
 //        }
-    
+
 //      } 
-        //  9. Показать последнюю цифру трёхзначного числа
+//  9. Показать последнюю цифру трёхзначного числа
 // int N = Convert.ToInt32(Console.ReadLine());
 // int a= N%10;
 // Console.WriteLine(a);
 
 
-        // 10. Показать вторую цифру трёхзначного числа
+// 10. Показать вторую цифру трёхзначного числа
 // int N = Convert.ToInt32(Console.ReadLine());
 // int a = N/100;
 // int c = N%10;
 // int b = (N-a*100 - c)/10;
 // Console.WriteLine(b);
-    
-    // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
-    
+
+// 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
+
 // int N = 98;
 // int a = N/10;
 // int b = N%10;
@@ -178,9 +178,9 @@
 // }
 // else
 //     Console.WriteLine(b);
-   
 
-    // 12. Удалить вторую цифру трёхзначного числа
+
+// 12. Удалить вторую цифру трёхзначного числа
 //  int N = Convert.ToInt32(Console.ReadLine());
 //  int a = N%10;
 //  int b = N/100;
@@ -188,7 +188,7 @@
 //  int d= c+a;
 //  Console.WriteLine(d);
 
-    // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
+// 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
 //     int func13(int a, int b)
 //  {
 //    int res = 0;
@@ -234,7 +234,7 @@
 
 
 // Почувствуй себя джуном
-    // 15. Дано число. Проверить кратно ли оно 7 и 23
+// 15. Дано число. Проверить кратно ли оно 7 и 23
 // int func15(int num)
 // {
 //     int res = 0;
@@ -250,7 +250,7 @@
 // int ans = func15(160);
 // Console.WriteLine(ans);
 
-        // 16. Дано число обозначающее день недели. Выяснить является номер дня недели выходным днём
+// 16. Дано число обозначающее день недели. Выяснить является номер дня недели выходным днём
 
 // bool Day (int num)
 // {
@@ -371,9 +371,9 @@
 //     } 
 //     return array; 
 // } 
- 
+
 // double [] Cube = FuncPow(14); 
- 
+
 // for(int index = 0; index < Cube.Length; index++) Console.WriteLine(Cube[index]);
 // 24. Найти кубы чисел от 1 до N
 // string func24 (int n)
@@ -382,7 +382,7 @@
 //     int i = 1;
 //     while (i<=n)
 //     {
-         
+
 //         Console.WriteLine (Math.Pow(i, 3));
 //          i++;
 //     }
@@ -399,19 +399,65 @@
 // }
 // Console.Write(func25(5));
 // 26. Возведите число А в натуральную степень B используя цикл
-int func26 (int A, int B)
-{
-    int result = 1;
-    for (int i = 1; i < B; i++) 
-    {
-        result = result * A;
-    } 
-    return result;
-}
-Console.WriteLine(func26(3, 4));
+// int func26 (int A, int B)
+// {
+//     int result = 1;
+//     for (int i = 1; i < B; i++) 
+//     {
+//         result = result * A;
+//     } 
+//     return result;
+// }
+// Console.WriteLine(func26(3, 4));
 
 // 27. Определить количество цифр в числе
+// int func27 (string a)
+// {
+//     int x = a.Length;
+//     return x;
+// }
+// Console.WriteLine(func27("34567"));
+
 // 28. Подсчитать сумму цифр в числе
+
+int func28(int N)
+{
+    string a = Convert.ToString(N);
+    int x = a.Length;
+    int summ = 0;
+    for (int i = 0; i < x; i++)
+    {
+        summ = summ + N % 10;
+        N = N / 10;
+    }
+    return summ;
+}
+Console.WriteLine (func28(3478));
+
+// int func27 (int N)
+// {   string a = Convert.ToString(N);
+//     int x = a.Length;
+
+// int result = a[0];
+// // for (int i = 0; i<x; i++)
+// //     {
+
+
+// //     }
+
+
+//     return result;
+// }
+// Console.WriteLine(func27(345));
+
+
+
+// Console.WriteLine(c);
+
+// char q = 'q'; Console.WriteLine(q);
+// q = '\x34'; Console.WriteLine(q);
+// q = Convert.ToChar(52); Console.WriteLine(q);
+
 // 29. Написать программу вычисления произведения чисел от 1 до N
 // 30. Показать кубы чисел, заканчивающихся на четную цифру
 
