@@ -391,6 +391,20 @@
 // Console.WriteLine(func24(5));
 
 // 25. Найти сумму чисел от 1 до А
+                
+                 //             Variant 2. Recursion.
+
+// int func25recursion(int N)
+// {
+//     if (N <= 1) return 0;
+//     else
+//     {
+//         return  func25recursion(N - 1)+N;
+//     }
+// }
+// Console.WriteLine(func25recursion(5));
+
+
 // int func25 (int n)
 // {
 
@@ -418,9 +432,22 @@
 // }
 // Console.WriteLine(func27("34567"));
 
-// 28. Подсчитать сумму цифр в числе
+//28. Подсчитать сумму цифр в числе
 
-// int func28(int N)
+                        // Variant with Recursion
+
+int func28recursion(int N)
+{
+    if (N == 0) return 0;
+    else
+    {
+        return N%10 + func28recursion(N/10);
+    }
+}
+Console.WriteLine(func28recursion(-1287));
+
+
+//        int func28(int N)
 // {
 //     // string a = Convert.ToString(N);
 //     // int x = a.Length;
@@ -433,7 +460,7 @@
 //     }
 //     return summ;
 // }
-//Console.WriteLine (func28(3478));
+// Console.WriteLine (func28(3478));
 
 // N 12345  o  summ
 //   1234   5  5
@@ -460,15 +487,16 @@
 
 //     Variant 2. Recursion.
 
-int func29recursion(int N)
-{
-    if (N < 1) return 1;
-    else
-    {
-        return N * func29recursion(N - 1);
-    }
-}
-Console.WriteLine(func29recursion(12));
+// int func29recursion(int N)
+// {
+//     if (N < 1) return 1;
+//     else
+//     {
+//         return N * func29recursion(N - 1);
+//     }
+// }
+// Console.WriteLine(func29recursion(12));
+
 // 30. Показать кубы чисел от 0 до N, заканчивающихся на четную цифру
 //  int func30(int N)
 // {
