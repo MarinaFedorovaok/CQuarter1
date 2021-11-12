@@ -441,14 +441,14 @@
 //   12     3  12
 //   1      2  14
 //   0      1  15
-                                    
-                                    //Char
+
+//Char
 // string str = "Нужно ли сейчас использовать тип данных char?";
 // char c = str[2];
 // Console.WriteLine(c);
 
 
-        // 29. Написать программу вычисления произведения чисел от 1 до N
+// 29. Написать программу вычисления произведения чисел от 1 до N
 
 //         int func29(int N)
 // {
@@ -458,21 +458,31 @@
 // }
 // Console.WriteLine (func29(12));
 
+//     Variant 2. Recursion.
 
-// 30. Показать кубы чисел от 0 до N, заканчивающихся на четную цифру
- int func30(int N)
+int func29recursion(int N)
 {
-        int cube = 2;
-        int i = 2;
-        while (i <= N)
-        {
-        cube=i*i*i;
-        i= i+2;
-        Console.WriteLine(cube);
-        }
-       return cube;
+    if (N < 1) return 1;
+    else
+    {
+        return N * func29recursion(N - 1);
+    }
 }
-func30(12);
+Console.WriteLine(func29recursion(12));
+// 30. Показать кубы чисел от 0 до N, заканчивающихся на четную цифру
+//  int func30(int N)
+// {
+//         int cube = 2;
+//         int i = 2;
+//         while (i <= N)
+//         {
+//         cube=i*i*i;
+//         i= i+2;
+//         Console.WriteLine(cube);
+//         }
+//        return cube;
+// }
+// func30(12);
 
 // Почувствуй себя сеньором
 // 31. Задать массив из 8 элементов и вывести их на экран 
