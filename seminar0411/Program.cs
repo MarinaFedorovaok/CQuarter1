@@ -391,8 +391,8 @@
 // Console.WriteLine(func24(5));
 
 // 25. Найти сумму чисел от 1 до А
-                
-                 //             Variant 2. Recursion.
+
+//             Variant 2. Recursion.
 
 // int func25recursion(int N)
 // {
@@ -424,6 +424,7 @@
 // }
 // Console.WriteLine(func26(3, 4));
 
+
 // 27. Определить количество цифр в числе
 // int func27 (string a)
 // {
@@ -434,17 +435,17 @@
 
 //28. Подсчитать сумму цифр в числе
 
-                        // Variant with Recursion
+// Variant with Recursion
 
-int func28recursion(int N)
-{
-    if (N == 0) return 0;
-    else
-    {
-        return N%10 + func28recursion(N/10);
-    }
-}
-Console.WriteLine(func28recursion(-1287));
+// int func28recursion(int N)
+// {
+//     if (N == 0) return 0;
+//     else
+//     {
+//         return N%10 + func28recursion(N/10);
+//     }
+// }
+// Console.WriteLine(func28recursion(-1287));
 
 
 //        int func28(int N)
@@ -511,7 +512,19 @@ Console.WriteLine(func28recursion(-1287));
 //        return cube;
 // }
 // func30(12);
-
+//*********************************************//
+//************* Var 2/ Recursion **************//
+//*********************************************//
+void func30recursion(int N)
+{
+    if (N % 2 != 0) N = N - 1;
+    if (N > 0)
+    {
+        Console.WriteLine(N * N * N);
+        func30recursion(N - 2);
+    }
+}
+func30recursion(5);
 // Почувствуй себя сеньором
 // 31. Задать массив из 8 элементов и вывести их на экран 
 // 32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
