@@ -145,6 +145,17 @@
 // }
 
 //  8. Показать четные числа от 1 до N
+
+void func8(int N)
+{
+    if (N%2!=0) N=N-1;
+      if (N>=1)
+      {
+         Console.WriteLine(N);
+         func8(N-2);
+      } 
+}
+func8(5);
 //    int N = Convert.ToInt32(Console.ReadLine());
 //      for (int x = 0; x<=N; x++) 
 //     {
@@ -155,6 +166,7 @@
 
 //      } 
 //  9. Показать последнюю цифру трёхзначного числа
+
 // int N = Convert.ToInt32(Console.ReadLine());
 // int a= N%10;
 // Console.WriteLine(a);
@@ -162,14 +174,14 @@
 
 // 10. Показать вторую цифру трёхзначного числа
 
-int func10 (int N)
-{
-int a = N/100;
-int c = N%10;
-int res = (N-a*100 - c)/10;
-return res;
-}
-Console.WriteLine(func10(325));
+// int func10 (int N)
+// {
+// int a = N/100;
+// int c = N%10;
+// int res = (N-a*100 - c)/10;
+// return res;
+// }
+// Console.WriteLine(func10(325));
 
 // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
 // int func11(int N)
