@@ -161,11 +161,15 @@
 
 
 // 10. Показать вторую цифру трёхзначного числа
-// int N = Convert.ToInt32(Console.ReadLine());
-// int a = N/100;
-// int c = N%10;
-// int b = (N-a*100 - c)/10;
-// Console.WriteLine(b);
+
+int func10 (int N)
+{
+int a = N/100;
+int c = N%10;
+int res = (N-a*100 - c)/10;
+return res;
+}
+Console.WriteLine(func10(325));
 
 // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
 // int func11(int N)
@@ -179,35 +183,18 @@
 //  }
 // Console.Write(func11(28));
 
-//*************************************************
-
-// int N = 98;
-// int a = N/10;
-// int b = N%10;
-// if (a>b)
-// {
-//     Console.WriteLine(a);
-// }
-// else
-//     Console.WriteLine(b);
-
 
 // 12. Удалить вторую цифру трёхзначного числа
-int func12 (int N)
-{
-    int a = N%10;
-    int b = N/100;
-    int c = b*100;
-    int res= c+a;
-    return res;
-}
-Console.Write(func12(456));
-//  int N = Convert.ToInt32(Console.ReadLine());
-//  int a = N%10;
-//  int b = N/100;
-//  int c = b*100;
-//  int d= c+a;
-//  Console.WriteLine(d);
+// int func12 (int N)
+// {
+//     int a = N%10;
+//     int b = N/100;
+//     int c = b*100;
+//     int res= c+a;
+//     return res;
+// }
+// Console.Write(func12(456));
+
 
 // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
 //     int func13(int a, int b)
