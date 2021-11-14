@@ -168,16 +168,16 @@
 // Console.WriteLine(b);
 
 // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
-int func11(int N)
-{
-    int a = N/10;
-    int b = N%10;
-    int res= a;
-    if (a<b) res = b;
-    //Console.WriteLine(res);
-    return res;
- }
-Console.Write(func11(28));
+// int func11(int N)
+// {
+//     int a = N/10;
+//     int b = N%10;
+//     int res= a;
+//     if (a<b) res = b;
+//     //Console.WriteLine(res);
+//     return res;
+//  }
+// Console.Write(func11(28));
 
 //*************************************************
 
@@ -193,6 +193,15 @@ Console.Write(func11(28));
 
 
 // 12. Удалить вторую цифру трёхзначного числа
+int func12 (int N)
+{
+    int a = N%10;
+    int b = N/100;
+    int c = b*100;
+    int res= c+a;
+    return res;
+}
+Console.Write(func12(456));
 //  int N = Convert.ToInt32(Console.ReadLine());
 //  int a = N%10;
 //  int b = N/100;
