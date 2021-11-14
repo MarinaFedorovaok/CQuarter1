@@ -529,16 +529,64 @@
 //************* Var 3/ Recursion **************//
 //*********************************************//
 
-void func30recursion2 (int i, int n)
-{
-    if (i<n) 
-    {Console.WriteLine(i*i*i);
-     func30recursion2 (i+2, n);
-   }
+// void func30recursion2 (int i, int n)
+// {
+//     if (i<n) 
+//     {Console.WriteLine(i*i*i);
+//      func30recursion2 (i+2, n);
+//    }
 
+// }
+// func30recursion2 (1, 34);
+// *// Сортировка слиянием
+int[] array = {1,2,3,2,4,5,8};
+
+void merge(int start, int middle, int end)
+{
+    int[] arrOut = new int[end - start];
+    int i = start;
+    int j = middle;
+    int o = 0;
+    while ((i < middle) && (j < end)) // проверяем границы кусочков массива
+    {
+        Console.WriteLine($"i = {i}\tj = {j}");
+        if (array[i] < array[j])
+        {
+            Console.WriteLine($"array[{i}] = {array[i]} < array[{j}] = {array[j]}");
+            arrOut[o] = array[i];//В итоговом массиве i+j элементов
+            i++; o++;
+        }
+        else
+        {
+            arrOut[o] = array[j];//В итоговом массиве i+j элементов
+            j++; o++;
+        }
+    }
+    if (i >= middle) //Дописываем хвосты в out
+    {
+        for (; j < end; j++)
+        {
+            arrOut[o] = array[j];
+            o++;
+        }
+    }
+    else
+    {
+        for (; i < end; i++)
+        {
+            arrOut[o] = array[i];
+            o++;
+        }
+    }
+    for (int k = 0; k < o; k++)
+    {
+        Console.Write(arrOut[k]);
+        Console.Write(' ');
+        array[start + k] = arrOut[k];
+    }
 }
-func30recursion2 (1, 34);
-// Почувствуй себя сеньором
+merge(0,3,7);
+// // Почувствуй себя сеньором
 // 31. Задать массив из 8 элементов и вывести их на экран 
 // 32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
 // 33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
