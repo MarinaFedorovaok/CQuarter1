@@ -168,7 +168,16 @@
 // Console.WriteLine(b);
 
 // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
-
+int func11(int N)
+{
+    int a = N/10;
+    int b = N%10;
+    int res= a;
+    if (a<b) res = b;
+    Console.WriteLine(res);
+    return res;
+ }
+func11(28);
 // int N = 98;
 // int a = N/10;
 // int b = N%10;
