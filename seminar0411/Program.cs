@@ -123,6 +123,17 @@
 //  }
 // func6 (6);
 //  7. Показать числа от -N до N
+void func7(int n)
+{
+    int i=-1*n;
+    while(i<=n)
+    {
+        Console.WriteLine(i);
+        i++;
+        func7(n-1);
+    }
+}
+func7(3);
 //int N = Convert.ToInt32(Console.ReadLine());
 // int func7 (int N)
 // {
@@ -146,16 +157,19 @@
 
 //  8. Показать четные числа от 1 до N
 
-void func8(int N)
-{
-    if (N%2!=0) N=N-1;
-      if (N>=1)
-      {
-         Console.WriteLine(N);
-         func8(N-2);
-      } 
-}
-func8(5);
+// void func8(int N)
+// {
+//     if (N%2!=0) N=N-1;
+//       if (N>=1)
+//       {
+//          Console.WriteLine(N);
+//          func8(N-2);
+//       } 
+// }
+// func8(5);
+
+//**************************************Var2
+
 //    int N = Convert.ToInt32(Console.ReadLine());
 //      for (int x = 0; x<=N; x++) 
 //     {
