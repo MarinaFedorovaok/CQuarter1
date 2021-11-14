@@ -538,71 +538,74 @@
 
 // }
 // func30recursion2 (1, 34);
-// *// Сортировка слиянием
-int[] array = {1,2,3,2,4,5,8};
+//****************************************************//
+            // *// Сортировка слиянием
+//****************************************************//
+
+// int[] array = {1,2,3,2,4,5,8};
 
 
-void merge(int start, int middle, int end)
-{
-    int[] arrOut = new int[end - start];
-    int i = start;
-    int j = middle;
-    int o = 0;
-    while ((i < middle) && (j < end)) // проверяем границы кусочков массива
-    {
-        //Console.WriteLine($"i = {i}\tj = {j}");
-        if (array[i] < array[j])
-        {
-            //Console.WriteLine($"array[{i}] = {array[i]} < array[{j}] = {array[j]}");
-            arrOut[o] = array[i];//В итоговом массиве i+j элементов
-            i++; o++;
-        }
-        else
-        {
-            arrOut[o] = array[j];//В итоговом массиве i+j элементов
-            j++; o++;
-        }
-    }
-    if (i >= middle) //Дописываем хвосты в out
-    {
-        for (; j < end; j++)
-        {
-            arrOut[o] = array[j];
-            o++;
-        }
-    }
-    else
-    {
-        for (; i < end; i++)
-        {
-            arrOut[o] = array[i];
-            o++;
-        }
-    }
-    for (int k = 0; k < o; k++)
-    {
-        Console.Write(arrOut[k]);
-        Console.Write(' ');
-        array[start + k] = arrOut[k];
-    }
-    Console.Write("\n");
-}
-void sort (int start, int end)
-{
-    if (end-start > 1)
-    {
-        int middle = start + (end-start)/2;
-        //Console.WriteLine($"length = {end-start}");
-        //Console.WriteLine($"start  = {start}");
-        //Console.WriteLine($"middle = {middle}");
-        //Console.WriteLine($"end    = {end}");
-        sort (start, middle);
-        sort (middle, end);
-        merge (start, middle, end);
-    }
-}
-//merge(0,3,7);
-sort(0,7);
+// void merge(int start, int middle, int end)
+// {
+//     int[] arrOut = new int[end - start];
+//     int i = start;
+//     int j = middle;
+//     int o = 0;
+//     while ((i < middle) && (j < end)) // проверяем границы кусочков массива
+//     {
+//         //Console.WriteLine($"i = {i}\tj = {j}");
+//         if (array[i] < array[j])
+//         {
+//             //Console.WriteLine($"array[{i}] = {array[i]} < array[{j}] = {array[j]}");
+//             arrOut[o] = array[i];//В итоговом массиве i+j элементов
+//             i++; o++;
+//         }
+//         else
+//         {
+//             arrOut[o] = array[j];//В итоговом массиве i+j элементов
+//             j++; o++;
+//         }
+//     }
+//     if (i >= middle) //Дописываем хвосты в out
+//     {
+//         for (; j < end; j++)
+//         {
+//             arrOut[o] = array[j];
+//             o++;
+//         }
+//     }
+//     else
+//     {
+//         for (; i < end; i++)
+//         {
+//             arrOut[o] = array[i];
+//             o++;
+//         }
+//     }
+//     for (int k = 0; k < o; k++)
+//     {
+//         Console.Write(arrOut[k]);
+//         Console.Write(' ');
+//         array[start + k] = arrOut[k];
+//     }
+//     Console.Write("\n");
+// }
+// void sort (int start, int end)
+// {
+//     if (end-start > 1)
+//     {
+//         int middle = start + (end-start)/2;
+//         //Console.WriteLine($"length = {end-start}");
+//         //Console.WriteLine($"start  = {start}");
+//         //Console.WriteLine($"middle = {middle}");
+//         //Console.WriteLine($"end    = {end}");
+//         sort (start, middle);
+//         sort (middle, end);
+//         merge (start, middle, end);
+//     }
+// }
+// //merge(0,3,7);
+// sort(0,7);
 
 // // Почувствуй себя сеньором
 // 31. Задать массив из 8 элементов и вывести их на экран 
