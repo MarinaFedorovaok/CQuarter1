@@ -541,6 +541,7 @@
 // *// Сортировка слиянием
 int[] array = {1,2,3,2,4,5,8};
 
+
 void merge(int start, int middle, int end)
 {
     int[] arrOut = new int[end - start];
@@ -549,10 +550,10 @@ void merge(int start, int middle, int end)
     int o = 0;
     while ((i < middle) && (j < end)) // проверяем границы кусочков массива
     {
-        Console.WriteLine($"i = {i}\tj = {j}");
+        //Console.WriteLine($"i = {i}\tj = {j}");
         if (array[i] < array[j])
         {
-            Console.WriteLine($"array[{i}] = {array[i]} < array[{j}] = {array[j]}");
+            //Console.WriteLine($"array[{i}] = {array[i]} < array[{j}] = {array[j]}");
             arrOut[o] = array[i];//В итоговом массиве i+j элементов
             i++; o++;
         }
@@ -584,8 +585,25 @@ void merge(int start, int middle, int end)
         Console.Write(' ');
         array[start + k] = arrOut[k];
     }
+    Console.Write("\n");
 }
-merge(0,3,7);
+void sort (int start, int end)
+{
+    if (end-start > 1)
+    {
+        int middle = start + (end-start)/2;
+        //Console.WriteLine($"length = {end-start}");
+        //Console.WriteLine($"start  = {start}");
+        //Console.WriteLine($"middle = {middle}");
+        //Console.WriteLine($"end    = {end}");
+        sort (start, middle);
+        sort (middle, end);
+        merge (start, middle, end);
+    }
+}
+//merge(0,3,7);
+sort(0,7);
+
 // // Почувствуй себя сеньором
 // 31. Задать массив из 8 элементов и вывести их на экран 
 // 32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
