@@ -174,10 +174,13 @@ int func11(int N)
     int b = N%10;
     int res= a;
     if (a<b) res = b;
-    Console.WriteLine(res);
+    //Console.WriteLine(res);
     return res;
  }
-func11(28);
+Console.Write(func11(28));
+
+//*************************************************
+
 // int N = 98;
 // int a = N/10;
 // int b = N%10;
