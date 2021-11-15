@@ -123,10 +123,6 @@
 //  }
 // func6 (6);
 //  7. Показать числа от -N до N
-void func7(int n)
-{
-    func7support(-n,n);
-}
 void func7support(int m, int n)
 {
     if (m<=n) 
@@ -136,6 +132,10 @@ void func7support(int m, int n)
     } 
 }
 
+void func7(int n)
+{
+    func7support(-n,n);
+}
 func7(3);
 //int N = Convert.ToInt32(Console.ReadLine());
 // int func7 (int N)
