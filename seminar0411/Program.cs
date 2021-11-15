@@ -671,20 +671,37 @@
 // }
 // func31(8);
 // 33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
-int func31(int n)
+// int func31(int n)
+// {
+//     int[] Array = new int[n];
+//     int summ = 0;
+//     for (int index = 0; index < Array.Length; index++)
+//     {
+//     Array[index] = new Random().Next(0,10);
+//     Console.WriteLine(Array[index]);  
+//     summ = summ+Array[index];
+//     }
+//     return summ;
+// }
+// Console.WriteLine($"Summ={func31(12)}");
+//34. Написать программу замену элементов массива на противоположные
+void func37(int n)
 {
     int[] Array = new int[n];
-    int summ = 0;
     for (int index = 0; index < Array.Length; index++)
     {
-    Array[index] = new Random().Next(0,10);
-    Console.WriteLine(Array[index]);  
-    summ = summ+Array[index];
+        Array[index] = new Random().Next(-3, 3);
+        Console.WriteLine(Array[index]);
     }
-    return summ;
+int[] Array2 = new int[n];
+for (int i = 0; i < Array2.Length; i++)
+{
+    Array2[i] = Array[i] * (-1);
+    Console.WriteLine(Array2[i]);
 }
-Console.WriteLine($"Summ={func31(12)}");
-// 34. Написать программу замену элементов массива на противоположные
+}
+func37(4);
+
 // 35. Определить, присутствует ли в заданном массиве, некоторое число 
 // 36. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
 // 37. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
