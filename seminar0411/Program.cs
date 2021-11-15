@@ -125,14 +125,17 @@
 //  7. Показать числа от -N до N
 void func7(int n)
 {
-    int i=-1*n;
-    while(i<=n)
-    {
-        Console.WriteLine(i);
-        i++;
-        func7(n-1);
-    }
+    func7support(-n,n);
 }
+void func7support(int m, int n)
+{
+    if (m<=n) 
+    {
+        Console.WriteLine (m);
+        func7support(m+1, n);
+    } 
+}
+
 func7(3);
 //int N = Convert.ToInt32(Console.ReadLine());
 // int func7 (int N)
