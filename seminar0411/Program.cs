@@ -651,17 +651,25 @@
 //****************************************
 
 // 31. Задать массив из 8 элементов и вывести их на экран 
+// void func31(int n)
+// {
+//     int[] Array = new int[n];
+//     for (int index = 0; index < Array.Length; index++)
+//     {
+//     Array[index] = new Random().Next(10);
+//     Console.WriteLine(Array[index]);    }
+// }
+// func31(8);
+// 32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
 void func31(int n)
 {
     int[] Array = new int[n];
     for (int index = 0; index < Array.Length; index++)
     {
-    Array[index] = new Random().Next(10);
-    Console.WriteLine(Array[index]);
-    }
+    Array[index] = new Random().Next(0,2);
+    Console.WriteLine(Array[index]);    }
 }
 func31(8);
-// 32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
 // 33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
 // 34. Написать программу замену элементов массива на противоположные
 // 35. Определить, присутствует ли в заданном массиве, некоторое число 
