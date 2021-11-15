@@ -661,16 +661,29 @@
 // }
 // func31(8);
 // 32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
-void func31(int n)
+// void func31(int n)
+// {
+//     int[] Array = new int[n];
+//     for (int index = 0; index < Array.Length; index++)
+//     {
+//     Array[index] = new Random().Next(0,2);
+//     Console.WriteLine(Array[index]);    }
+// }
+// func31(8);
+// 33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
+int func31(int n)
 {
     int[] Array = new int[n];
+    int summ = 0;
     for (int index = 0; index < Array.Length; index++)
     {
-    Array[index] = new Random().Next(0,2);
-    Console.WriteLine(Array[index]);    }
+    Array[index] = new Random().Next(0,10);
+    Console.WriteLine(Array[index]);  
+    summ = summ+Array[index];
+    }
+    return summ;
 }
-func31(8);
-// 33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
+Console.WriteLine($"Summ={func31(12)}");
 // 34. Написать программу замену элементов массива на противоположные
 // 35. Определить, присутствует ли в заданном массиве, некоторое число 
 // 36. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
