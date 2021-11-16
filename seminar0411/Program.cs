@@ -675,9 +675,9 @@ string PrintArray(int[] array) //Создаем метод выведения м
     }
     return res;
 }
-int[] arr = CreateArray(8);
-FillArray(arr, 10, 99);
-Console.Write(PrintArray(arr));
+// int[] arr = CreateArray(8);
+// FillArray(arr, 10, 99);
+// Console.Write(PrintArray(arr));
 
                 /// Первый вариант
 // void func31(int n)
@@ -691,6 +691,9 @@ Console.Write(PrintArray(arr));
 // func31(8);
 
 // 32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
+int[] arr = CreateArray(8);
+FillArray(arr, 0, 1);
+Console.Write(PrintArray(arr));
 
 // void func31(int n)
 // {
