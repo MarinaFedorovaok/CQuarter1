@@ -724,41 +724,38 @@ int summArray(int[] array) // Создаем метод для поиска су
 // Console.WriteLine(summArray(arr));
 
 //34. Написать программу замену элементов массива на противоположные
-int[] arr = CreateArray(12); // создали первый массив
-FillArray(arr, 0, 9); //заполнили первый массив
-Console.WriteLine(PrintArray(arr)); //Печатаем первый массив для проверки результата
-int[] arr2 = CreateArray(12); // создали второй массив с тем же количеством элементов
 
-void multipleArray(int[] array2, int m) // Создаем метод заполения массива числами, кратными эмементам первого
-{
-    string res = String.Empty;
-    for (int i = 0; i < array2.Length; i++)
-    {
-        array2[i] = m * arr[i];
-    }
-}
-multipleArray(arr2, -5); //заполнили второй массив
-Console.WriteLine(PrintArray(arr2)); //Печатаем второй массив 
+// int[] arr = CreateArray(12); // создали первый массив
+// FillArray(arr, 0, 9); //заполнили первый массив
+// Console.WriteLine(PrintArray(arr)); //Печатаем первый массив для проверки результата
+// int[] arr2 = CreateArray(12); // создали второй массив с тем же количеством элементов
 
-// 35. Определить, присутствует ли в заданном массиве, некоторое число 
-// void func35(int n)
+// void multipleArray(int[] array2, int m) // Создаем метод заполения массива числами, кратными эмементам первого
 // {
-//     int[] Array = new int[n];
-//     for (int index = 0; index < Array.Length; index++)
+//     string res = String.Empty;
+//     for (int i = 0; i < array2.Length; i++)
 //     {
-//         Array[index] = new Random().Next(0, 10);
-//         Console.WriteLine(Array[index]);
-//     }
-//     bool check(int x)
-//     {
-//         for (int index = 0; index < Array.Length; index++)
-//         {
-//            return Array[index] == x;
-//         }
-//     return false;
+//         array2[i] = m * arr[i];
 //     }
 // }
-// Console.WriteLine(func35(6, (check(5))));
+// multipleArray(arr2, -5); //заполнили второй массив
+// Console.WriteLine(PrintArray(arr2)); //Печатаем второй массив 
+
+// 35. Определить, присутствует ли в заданном массиве, некоторое число 
+int[] arr = CreateArray(12); // создали массив
+FillArray(arr, 0, 9); //заполнили  массив
+Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
+
+bool checkArray(int[] array, int x) // Создаем местод для проверки наличия числа х в массиве
+{   int res = 0;
+    for (int index = 0; index < array.Length; index++)
+    {   
+        if (array[index] == x) res = x;
+    }
+    return res==x;
+}
+Console.WriteLine(checkArray(arr, 8));
+
 
 
 // 36. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
