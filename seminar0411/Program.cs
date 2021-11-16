@@ -691,9 +691,11 @@ string PrintArray(int[] array) //Создаем метод выведения м
 // func31(8);
 
 // 32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
-int[] arr = CreateArray(8);
-FillArray(arr, 0, 1);
-Console.Write(PrintArray(arr));
+// int[] arr = CreateArray(8);
+// FillArray(arr, 0, 1);
+// Console.Write(PrintArray(arr));
+
+                // First method
 
 // void func31(int n)
 // {
@@ -706,6 +708,21 @@ Console.Write(PrintArray(arr));
 // func31(8);
 //33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
 // int func31(int n)
+
+int summArray(int [] array) // Создаем метод для поиска суммы элементов массива
+{
+    int result = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        result += array[i];
+    }
+    return result;
+}
+
+int[] arr = CreateArray(12);
+FillArray(arr, 0, 9);
+Console.WriteLine(PrintArray(arr)); //Печатаем для проверки результата
+Console.WriteLine(summArray(arr));
 // {
 //     int[] Array = new int[n];
 //     int summ = 0;
