@@ -651,7 +651,7 @@
 //****************************************
 
 // 31. Задать массив из 8 элементов и вывести их на экран 
- //New Variant
+//New Variant
 int[] CreateArray(int n) //Создаем метод создания массива
 {
     return new int[n];
@@ -679,7 +679,7 @@ string PrintArray(int[] array) //Создаем метод выведения м
 // FillArray(arr, 10, 99);
 // Console.Write(PrintArray(arr));
 
-                /// Первый вариант
+/// Первый вариант
 // void func31(int n)
 // {
 //     int[] Array = new int[n];
@@ -695,7 +695,7 @@ string PrintArray(int[] array) //Создаем метод выведения м
 // FillArray(arr, 0, 1);
 // Console.Write(PrintArray(arr));
 
-                // First method
+// First method
 
 // void func31(int n)
 // {
@@ -709,7 +709,7 @@ string PrintArray(int[] array) //Создаем метод выведения м
 //33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
 // int func31(int n)
 
-int summArray(int [] array) // Создаем метод для поиска суммы элементов массива
+int summArray(int[] array) // Создаем метод для поиска суммы элементов массива
 {
     int result = 0;
     for (int i = 0; i < array.Length; i++)
@@ -719,10 +719,12 @@ int summArray(int [] array) // Создаем метод для поиска с�
     return result;
 }
 
-int[] arr = CreateArray(12);
-FillArray(arr, 0, 9);
-Console.WriteLine(PrintArray(arr)); //Печатаем для проверки результата
-Console.WriteLine(summArray(arr));
+// int[] arr = CreateArray(12);
+// FillArray(arr, 0, 9);
+// Console.WriteLine(PrintArray(arr)); //Печатаем для проверки результата
+// Console.WriteLine(summArray(arr));
+
+//First Solution
 // {
 //     int[] Array = new int[n];
 //     int summ = 0;
@@ -736,36 +738,23 @@ Console.WriteLine(summArray(arr));
 // }
 // Console.WriteLine($"Summ={func31(12)}");
 //34. Написать программу замену элементов массива на противоположные
+ int[] arr = CreateArray(12); // создали первый массив
+ FillArray(arr, 0, 9); //заполнили первый массив
+ Console.WriteLine(PrintArray(arr)); //Печатаем первый массив для проверки результата
+ int[] arr2 = CreateArray(12); // создали второй массив с тем же количеством элементов
+ void multipleArray(int[] array2, int m) // Создаем метод заполения массива числами, кратными эмементам первого
+{
+    string res = String.Empty;
+    for (int i = 0; i < array2.Length; i++)
+    {
+        array2[i] = m*arr[i];
+    }
+}
+multipleArray(arr2, -1); //заполнили второй массив
+Console.WriteLine(PrintArray(arr2)); //Печатаем второй массив для проверки результата
 
 
 
-// ///Это я пыталась 
-// string PrintArray(int[] array)
-// {
-//  string res = String.Empty;
-//  for (int i = 0)
-//  {
-//      res+=$"{array[i]}";
-//  }
-// return res;
-// }
-///
-// void func37(int n)
-// {
-//     int[] Array = new int[n];
-//     for (int index = 0; index < Array.Length; index++)
-//     {
-//         Array[index] = new Random().Next(-3, 3);
-//         Console.WriteLine(Array[index]);
-//     }
-//     int[] Array2 = new int[n];
-//     for (int i = 0; i < Array2.Length; i++)
-//     {
-//         Array2[i] = -Array[i];
-//         Console.WriteLine(Array2[i]);
-//     }
-// }
-// func37(4);
 
 // 35. Определить, присутствует ли в заданном массиве, некоторое число 
 // void func35(int n)
