@@ -742,23 +742,35 @@ int summArray(int[] array) // Создаем метод для поиска су
 // Console.WriteLine(PrintArray(arr2)); //Печатаем второй массив 
 
 // 35. Определить, присутствует ли в заданном массиве, некоторое число 
-int[] arr = CreateArray(12); // создали массив
-FillArray(arr, 0, 9); //заполнили  массив
-Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
+// int[] arr = CreateArray(12); // создали массив
+// FillArray(arr, 0, 9); //заполнили  массив
+// Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
 
 bool checkArray(int[] array, int x) // Создаем местод для проверки наличия числа х в массиве
-{   int res = 0;
+{
+    int res = 0;
     for (int index = 0; index < array.Length; index++)
-    {   
+    {
         if (array[index] == x) res = x;
     }
-    return res==x;
+    return res == x;
 }
-Console.WriteLine(checkArray(arr, 8));
-
-
+//Console.WriteLine(checkArray(arr, 8));
 
 // 36. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
+int[] arr = CreateArray(15); // создали массив
+FillArray(arr, 100, 999); //заполнили  массив положительными трёхзначными числами
+Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
+int countEvenArray(int[] array) // Создаем метод для подсчета четных элементов массива
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i]%2==0) count++; 
+    }
+    return count;
+}
+Console.WriteLine($"количество четных эементов:{countEvenArray(arr)}");
 // 37. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
 // 38. Найти сумму чисел одномерного массива стоящих на нечетной позиции
 // 39. Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
