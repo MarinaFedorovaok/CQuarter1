@@ -651,6 +651,35 @@
 //****************************************
 
 // 31. Задать массив из 8 элементов и вывести их на экран 
+ //New Variant
+int[] CreateArray(int n) //Создаем метод создания массива
+{
+    return new int[n];
+}
+
+void FillArray(int[] array, int min, int max) // Создаем метод заполения массива случайными числами (от мин до макс)
+{
+    string res = String.Empty;
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(min, max + 1);
+    }
+}
+
+string PrintArray(int[] array) //Создаем метод выведения массива на экран в строку
+{
+    string res = String.Empty;
+    for (int i = 0; i < array.Length; i++)
+    {
+        res += $"{array[i]} ";
+    }
+    return res;
+}
+int[] arr = CreateArray(8);
+FillArray(arr, 10, 99);
+Console.Write(PrintArray(arr));
+
+                /// Первый вариант
 // void func31(int n)
 // {
 //     int[] Array = new int[n];
@@ -660,7 +689,9 @@
 //     Console.WriteLine(Array[index]);    }
 // }
 // func31(8);
+
 // 32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
+
 // void func31(int n)
 // {
 //     int[] Array = new int[n];
@@ -670,7 +701,7 @@
 //     Console.WriteLine(Array[index]);    }
 // }
 // func31(8);
-// 33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
+//33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
 // int func31(int n)
 // {
 //     int[] Array = new int[n];
@@ -685,24 +716,60 @@
 // }
 // Console.WriteLine($"Summ={func31(12)}");
 //34. Написать программу замену элементов массива на противоположные
-void func37(int n)
-{
-    int[] Array = new int[n];
-    for (int index = 0; index < Array.Length; index++)
-    {
-        Array[index] = new Random().Next(-3, 3);
-        Console.WriteLine(Array[index]);
-    }
-int[] Array2 = new int[n];
-for (int i = 0; i < Array2.Length; i++)
-{
-    Array2[i] = Array[i] * (-1);
-    Console.WriteLine(Array2[i]);
-}
-}
-func37(4);
+
+
+
+// ///Это я пыталась 
+// string PrintArray(int[] array)
+// {
+//  string res = String.Empty;
+//  for (int i = 0)
+//  {
+//      res+=$"{array[i]}";
+//  }
+// return res;
+// }
+///
+// void func37(int n)
+// {
+//     int[] Array = new int[n];
+//     for (int index = 0; index < Array.Length; index++)
+//     {
+//         Array[index] = new Random().Next(-3, 3);
+//         Console.WriteLine(Array[index]);
+//     }
+//     int[] Array2 = new int[n];
+//     for (int i = 0; i < Array2.Length; i++)
+//     {
+//         Array2[i] = -Array[i];
+//         Console.WriteLine(Array2[i]);
+//     }
+// }
+// func37(4);
 
 // 35. Определить, присутствует ли в заданном массиве, некоторое число 
+// void func35(int n)
+// {
+//     int[] Array = new int[n];
+//     for (int index = 0; index < Array.Length; index++)
+//     {
+//         Array[index] = new Random().Next(0, 10);
+//         Console.WriteLine(Array[index]);
+//     }
+//     bool check(int x)
+//     {
+//         for (int index = 0; index < Array.Length; index++)
+//         {
+//            return Array[index] == x;
+//         }
+//     return false;
+//     }
+// }
+// Console.WriteLine(func35(6, (check(5))));
+
+
+
+
 // 36. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
 // 37. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
 // 38. Найти сумму чисел одномерного массива стоящих на нечетной позиции
