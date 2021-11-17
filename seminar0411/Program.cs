@@ -774,9 +774,9 @@ int countEvenArray(int[] array) // Создаем метод для подсче
 
 // 37. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
 
-int[] arr = CreateArray(123); // создали массив из 123 чисел
-FillArray(arr, 0, 199); //заполнили  массив числами
-Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
+// int[] arr = CreateArray(123); // создали массив из 123 чисел
+// FillArray(arr, 0, 199); //заполнили  массив числами
+// Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
 
 int countCutArray(int[] array, int first, int second) // Создаем метод для подсчета количества элементов 
                                                         //из отрезка [first- second]
@@ -789,7 +789,7 @@ int countCutArray(int[] array, int first, int second) // Создаем мето
     }
     return count;
 }
-Console.WriteLine($"количество элементов массива из отрезка: {countCutArray(arr, 10, 99)}");
+//Console.WriteLine($"количество элементов массива из отрезка: {countCutArray(arr, 10, 99)}");
 
 // 38. Найти сумму чисел одномерного массива стоящих на нечетной позиции
 
@@ -810,6 +810,17 @@ int summOddArray(int[] array) // Создаем метод для нахожде
 //Console.WriteLine($"Сумма элементов на нечетной позиции:{summOddArray(arr)}");
 
 // 39. Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+int[] arr = CreateArray(10); // создали массив 
+FillArray(arr, 0, 9); //заполнили  массив числами
+Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
+int compositinArray(int[] array, int n) // Создаем метод для нахождения произведения пар чисел
+                                                   
+{
+    return array[n-1]*array[array.Length-n];
+}
+Console.WriteLine(compositinArray(arr, 2));
+
+
 // 40. В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
 
 // Почувствуй себя лидом
