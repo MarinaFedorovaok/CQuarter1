@@ -5,38 +5,41 @@
 // a + b > c
 // b + c > a
 // c + a > b
-
-bool triangle(int a, int b, int c)
+bool triangle(int a, int b, int c) // создание метода проверки
 {
- return((a+b>c)||(b + c > a)||c + a > b);
+    return ((a + b > c) && (b + c > a) && c + a > b);
 }
-Console.WriteLine(triangle(2,4,5));
-// a + b > c
-// b + c > a
-// c + a > b
+Console.WriteLine("Bведите число1");
+int d = int.Parse(Console.ReadLine());
+Console.WriteLine("Bведите число2");
+int e = int.Parse(Console.ReadLine());
+Console.WriteLine("Bведите число3");
+int f = int.Parse(Console.ReadLine());
+Console.WriteLine($"Ответ:{triangle(d, e, f)}");
+
 
 // 42. Определить сколько чисел больше 0 введено с клавиатуры
-    // int countAlements(int n)
-    // {
-    // string a;
-    //         int[] b = new int[n];
-    //         for (int i=0; i<n; i++)
-    //         {a = Console.ReadLine();
-    //         b[i] = Convert.ToInt32(a);
-    //         }
+// int countAlements(int n)
+// {
+// string a;
+//         int[] b = new int[n];
+//         for (int i=0; i<n; i++)
+//         {a = Console.ReadLine();
+//         b[i] = Convert.ToInt32(a);
+//         }
 
-    //         // while ((a = Console.ReadLine()) != "end") //Получаем строку и проверяем ее содержание
-    //         //     b[i++] = Convert.ToInt32(a); //в стркое нет "конца" - значит конвертим и пишем в массив
-    //         int count = 0;
-    //         for (int k = 0; k < n; k++) //вывод заполненных ячеек массива
-    //         {
-    //         if (b[k]>0) count++;
-    //             Console.WriteLine(b[k]);
-    //         }
-    //     return count;
-    //  }
-    // Console.WriteLine($"Количество положительных элементов:{countAlements(5)}");
-          //  Console.ReadKey(true);
+//         // while ((a = Console.ReadLine()) != "end") //Получаем строку и проверяем ее содержание
+//         //     b[i++] = Convert.ToInt32(a); //в стркое нет "конца" - значит конвертим и пишем в массив
+//         int count = 0;
+//         for (int k = 0; k < n; k++) //вывод заполненных ячеек массива
+//         {
+//         if (b[k]>0) count++;
+//             Console.WriteLine(b[k]);
+//         }
+//     return count;
+//  }
+// Console.WriteLine($"Количество положительных элементов:{countAlements(5)}");
+//  Console.ReadKey(true);
 
 // 43. Написать программу преобразования десятичного числа в двоичное
 // 44. Найти точку пересечения двух прямых заданных уравнением y1=k1x1+b1, y2=k2x2+b2 и b2 и k2 заданы
