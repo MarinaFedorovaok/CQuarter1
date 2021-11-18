@@ -9,13 +9,30 @@ bool triangle(int a, int b, int c) // создание метода провер
 {
     return ((a + b > c) && (b + c > a) && c + a > b);
 }
-Console.WriteLine("Bведите число1");
-int d = int.Parse(Console.ReadLine());
-Console.WriteLine("Bведите число2");
-int e = int.Parse(Console.ReadLine());
-Console.WriteLine("Bведите число3");
-int f = int.Parse(Console.ReadLine());
-Console.WriteLine($"Ответ:{triangle(d, e, f)}");
+// Console.WriteLine("Bведите число1"); // ввод чисел с клавиатуры по очереди
+// int d = int.Parse(Console.ReadLine());
+// Console.WriteLine("Bведите число2");
+// int e = int.Parse(Console.ReadLine());
+// Console.WriteLine("Bведите число3");
+// int f = int.Parse(Console.ReadLine());
+// Console.WriteLine($"Ответ:{triangle(d, e, f)}");
+
+//Алгортим решения
+// 1. Вводим стороку с консоли
+// 2. Определяем длину строки. Создаем массив размером, равным длине этой строки
+// 3. В массив помещаем все символы по одному
+// 4. создаем итоговый массив
+// 5. В итоговый массив помещаем числа таким образом: 
+//  - первое число - все знаки до пробела (преобразуем в число)
+//  - второе число  -опять все знаки до пробела
+//  6. На выходе - массив чисел
+// 
+// 
+// 
+// 
+// 
+// 
+
 
 
 // 42. Определить сколько чисел больше 0 введено с клавиатуры
