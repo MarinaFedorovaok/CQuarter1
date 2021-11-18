@@ -652,30 +652,30 @@
 
 // 31. Задать массив из 8 элементов и вывести их на экран 
 //New Variant
-int[] CreateArray(int n) //Создаем метод создания массива
-{
-    return new int[n];
-}
+// int[] CreateArray(int n) //Создаем метод создания массива
+// {
+//     return new int[n];
+// }
 
-void FillArray(int[] array, int min, int max) // Создаем метод заполения массива случайными числами (от мин до макс)
-{
-    string res = String.Empty;
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = new Random().Next(min, max + 1);
-    }
-}
+// void FillArray(int[] array, int min, int max) // Создаем метод заполения массива случайными числами (от мин до макс)
+// {
+//     string res = String.Empty;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = new Random().Next(min, max + 1);
+//     }
+// }
 
-string PrintArray(int[] array) //Создаем метод выведения массива на экран в строку
-{
-    string res = String.Empty;
-    for (int i = 0; i < array.Length; i++)
-    {
-        res += $"{array[i]} ";
-    }
-    return res;
-}
-// int[] arr = CreateArray(8);
+// string PrintArray(int[] array) //Создаем метод выведения массива на экран в строку
+// {
+//     string res = String.Empty;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         res += $"{array[i]} ";
+//     }
+//     return res;
+// }
+// // int[] arr = CreateArray(8);
 // FillArray(arr, 10, 99);
 // Console.Write(PrintArray(arr));
 
@@ -708,15 +708,15 @@ string PrintArray(int[] array) //Создаем метод выведения м
 // func31(8);
 //33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
 
-int summArray(int[] array) // Создаем метод для поиска суммы элементов массива
-{
-    int result = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        result += array[i];
-    }
-    return result;
-}
+// int summArray(int[] array) // Создаем метод для поиска суммы элементов массива
+// {
+//     int result = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         result += array[i];
+//     }
+//     return result;
+// }
 
 // int[] arr = CreateArray(12);
 // FillArray(arr, 0, 9);
@@ -746,121 +746,154 @@ int summArray(int[] array) // Создаем метод для поиска су
 // FillArray(arr, 0, 9); //заполнили  массив
 // Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
 
-bool checkArray(int[] array, int x) // Создаем местод для проверки наличия числа х в массиве
-{
-    int res = 0;
-    for (int index = 0; index < array.Length; index++)
-    {
-        if (array[index] == x) res = x;
-    }
-    return res == x;
-}
+// bool checkArray(int[] array, int x) // Создаем местод для проверки наличия числа х в массиве
+// {
+//     int res = 0;
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         if (array[index] == x) res = x;
+//     }
+//     return res == x;
+// }
 //Console.WriteLine(checkArray(arr, 8));
 
 // 36. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
 // int[] arr = CreateArray(15); // создали массив
 // FillArray(arr, 100, 999); //заполнили  массив положительными трёхзначными числами
 // Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
-int countEvenArray(int[] array) // Создаем метод для подсчета четных элементов массива
-{
-    int count = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] % 2 == 0) count++;
-    }
-    return count;
-}
-//Console.WriteLine($"количество четных эементов:{countEvenArray(arr)}");
+// int countEvenArray(int[] array) // Создаем метод для подсчета четных элементов массива
+// {
+//     int count = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] % 2 == 0) count++;
+//     }
+//     return count;
+// }
+// //Console.WriteLine($"количество четных эементов:{countEvenArray(arr)}");
 
 // 37. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
 
 // int[] arr = CreateArray(123); // создали массив из 123 чисел
 // FillArray(arr, 0, 199); //заполнили  массив числами
-// Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
+// // Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
 
-int countCutArray(int[] array, int first, int second) // Создаем метод для подсчета количества элементов 
-                                                      //из отрезка [first- second]
+// int countCutArray(int[] array, int first, int second) // Создаем метод для подсчета количества элементов 
+//                                                       //из отрезка [first- second]
 
-{
-    int count = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] >= first && array[i] <= second) count++;
-    }
-    return count;
-}
-//Console.WriteLine($"количество элементов массива из отрезка: {countCutArray(arr, 10, 99)}");
+// {
+//     int count = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] >= first && array[i] <= second) count++;
+//     }
+//     return count;
+// }
+// //Console.WriteLine($"количество элементов массива из отрезка: {countCutArray(arr, 10, 99)}");
 
-// 38. Найти сумму чисел одномерного массива стоящих на нечетной позиции
+// // 38. Найти сумму чисел одномерного массива стоящих на нечетной позиции
 
-// int[] arr = CreateArray(5); // создали массив из 12 чисел
-// FillArray(arr, 0, 9); //заполнили  массив числами
-// Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
-int summOddArray(int[] array) // Создаем метод для нахождения суммы чисел
-                              //стоящих на нечетной позиции
+// // int[] arr = CreateArray(5); // создали массив из 12 чисел
+// // FillArray(arr, 0, 9); //заполнили  массив числами
+// // Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
+// int summOddArray(int[] array) // Создаем метод для нахождения суммы чисел
+//                               //стоящих на нечетной позиции
 
-{
-    int summOdd = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (i % 2 != 0) summOdd += array[i];
-    }
-    return summOdd;
-}
-//Console.WriteLine($"Сумма элементов на нечетной позиции:{summOddArray(arr)}");
+// {
+//     int summOdd = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (i % 2 != 0) summOdd += array[i];
+//     }
+//     return summOdd;
+// }
+// //Console.WriteLine($"Сумма элементов на нечетной позиции:{summOddArray(arr)}");
 
-// 39. Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
-// int[] arr = CreateArray(10); // создали массив 
-// FillArray(arr, 0, 9); //заполнили  массив числами
-// Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
-int compositinArray(int[] array, int n) // Создаем метод для нахождения произведения пар чисел
+// // 39. Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+// // int[] arr = CreateArray(10); // создали массив 
+// // FillArray(arr, 0, 9); //заполнили  массив числами
+// // Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
+// int compositinArray(int[] array, int n) // Создаем метод для нахождения произведения пар чисел
 
-{
-    return array[n - 1] * array[array.Length - n];
-}
+// {
+//     return array[n - 1] * array[array.Length - n];
+// }
 //Console.WriteLine(compositinArray(arr, 2));
 
-// 40. В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
-int[] arr = CreateArray(328); // создали массив 
-FillArray(arr, 2000, 3557); //заполнили  массив числами
-Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
-int maxArray(int[] array) // Создаем метод для нахождения максимального элемента массива
+// // 40. В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
+// int[] arr = CreateArray(328); // создали массив 
+// FillArray(arr, 2000, 3557); //заполнили  массив числами
+// Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
+// int maxArray(int[] array) // Создаем метод для нахождения максимального элемента массива
 
-{
-    int max = array[0];
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] > max) max = array[i];
-    }
-    return max;
-}
-//Console.WriteLine($"максимальное число в массиве:{maxArray(arr)}");// Вывод макс для проверки
+// {
+//     int max = array[0];
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] > max) max = array[i];
+//     }
+//     return max;
+// }
+// //Console.WriteLine($"максимальное число в массиве:{maxArray(arr)}");// Вывод макс для проверки
 
-int minArray(int[] array) // Создаем метод для нахождения минимального элемента массива
+// int minArray(int[] array) // Создаем метод для нахождения минимального элемента массива
 
-{
-    int min = array[0];
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] < min) min = array[i];
-    }
-    return min;
-}
-//Console.WriteLine($"миниимальное число в массиве:{minArray(arr)}");// Вывод мин для проверки
+// {
+//     int min = array[0];
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] < min) min = array[i];
+//     }
+//     return min;
+// }
+// //Console.WriteLine($"миниимальное число в массиве:{minArray(arr)}");// Вывод мин для проверки
 
-int diff(int ma, int mi) // Создаем метод для нахождения разницы
-{
-    return ma - mi;
-}
-int ma = maxArray(arr);
-int mi = minArray(arr);
-Console.WriteLine($"Разница между максимальным и минимальным элементом:{diff(ma, mi)}");
+// int diff(int ma, int mi) // Создаем метод для нахождения разницы
+// {
+//     return ma - mi;
+// }
+// int ma = maxArray(arr);
+// int mi = minArray(arr);
+//Console.WriteLine($"Разница между максимальным и минимальным элементом:{diff(ma, mi)}");
 
 // Почувствуй себя лидом
+
 // 41. Выяснить являются ли три числа сторонами треугольника 
+// Сумма длин двух любых сторон треугольника больше длины оставшейся стороны:
+
+// a + b > c
+// b + c > a
+// c + a > b
+
 // 42. Определить сколько чисел больше 0 введено с клавиатуры
+// char countNum(string text) // Метод возвращаем символ
+// {
+//     text=Console.ReadLine(); // Ввводим текст с клавиатуры
+//     char i = text[0];
+//     return i;
+// }
+//Console.WriteLine(countNum("45"));
+    int countAlements(int n)
+    {
+    string a;
+            int[] b = new int[n];
+            int i=0;
+ 
+            while ((a = Console.ReadLine()) != "end") //Получаем строку и проверяем ее содержание
+                b[i++] = Convert.ToInt32(a); //в стркое нет "конца" - значит конвертим и пишем в массив
+            int count = 0;
+            for (int k = 0; k < i; k++) //вывод заполненных ячеек массива
+            {
+            if (b[k]>0) count++;
+                Console.WriteLine(b[k]);
+            }
+        return count;
+     }
+    Console.WriteLine($"Количество положительных элементов:{countAlements(5)}");
+          //  Console.ReadKey(true);
+
 // 43. Написать программу преобразования десятичного числа в двоичное
-// 44. Найти точку пересечения двух прямых заданных уравнением y=kx+b, а1 k1 и а2 и k2 заданы
+// 44. Найти точку пересечения двух прямых заданных уравнением y=k1x+b1, k1 и b2 и k2 заданы
 // 45. Показать числа Фибоначчи
 // 46. Написать программу масштабирования фигуры
 // 47. Написать программу копирования массива
