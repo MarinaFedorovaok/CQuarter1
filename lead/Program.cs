@@ -27,6 +27,14 @@ Console.WriteLine("Введите числа через пробел");
 string condition = Console.ReadLine(); //ввели числа в строку
 int count = condition.Length; // узнали количество символов
 
+void FillArray1(int[] array) // Создаем метод заполения массива знаками 
+{
+       for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = Convert.ToInt32(condition[i]);
+    }
+}
+
 string PrintArray(int[] array) //Создаем метод выведения массива на экран в строку
 {
     string res = String.Empty;
@@ -37,21 +45,8 @@ string PrintArray(int[] array) //Создаем метод выведения м
     return res;
 }
 int[] arr = Array1(count);
-Console.Write(PrintArray(arr)); // создали и напечатали пустой массив нужного размера
-
-
-
-
-// void FillArray(int[] array, int min, int max) // Создаем метод заполения массива числами (от мин до макс)
-// {
-//     string res = String.Empty;
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         array[i] = new Random().Next(min, max + 1);
-//     }
-// }
-
-
+FillArray1(arr);
+Console.Write(PrintArray(arr)); // создали и напечатали массив нужного размера
 
 
 // 1. Вводим стороку с консоли
