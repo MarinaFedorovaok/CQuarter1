@@ -17,7 +17,43 @@ bool triangle(int a, int b, int c) // создание метода провер
 // int f = int.Parse(Console.ReadLine());
 // Console.WriteLine($"Ответ:{triangle(d, e, f)}");
 
-//Алгортим решения
+            //**********Алгортим решения
+int[] Array1(int count) //Создаем массив размером, равным длине строки
+{   
+    return new int[count];
+}
+
+Console.WriteLine("Введите числа через пробел");
+string condition = Console.ReadLine(); //ввели числа в строку
+int count = condition.Length; // узнали количество символов
+
+string PrintArray(int[] array) //Создаем метод выведения массива на экран в строку
+{
+    string res = String.Empty;
+    for (int i = 0; i < array.Length; i++)
+    {
+        res += $"{array[i]} ";
+    }
+    return res;
+}
+int[] arr = Array1(count);
+Console.Write(PrintArray(arr)); // создали и напечатали пустой массив нужного размера
+
+
+
+
+// void FillArray(int[] array, int min, int max) // Создаем метод заполения массива числами (от мин до макс)
+// {
+//     string res = String.Empty;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = new Random().Next(min, max + 1);
+//     }
+// }
+
+
+
+
 // 1. Вводим стороку с консоли
 // 2. Определяем длину строки. Создаем массив размером, равным длине этой строки
 // 3. В массив помещаем все символы по одному
@@ -26,13 +62,6 @@ bool triangle(int a, int b, int c) // создание метода провер
 //  - первое число - все знаки до пробела (преобразуем в число)
 //  - второе число  -опять все знаки до пробела
 //  6. На выходе - массив чисел
-// 
-// 
-// 
-// 
-// 
-// 
-
 
 
 // 42. Определить сколько чисел больше 0 введено с клавиатуры
