@@ -866,34 +866,44 @@
 // c + a > b
 
 // 42. Определить сколько чисел больше 0 введено с клавиатуры
-// char countNum(string text) // Метод возвращаем символ
-// {
-//     text=Console.ReadLine(); // Ввводим текст с клавиатуры
-//     char i = text[0];
-//     return i;
-// }
-//Console.WriteLine(countNum("45"));
-    int countAlements(int n)
-    {
-    string a;
-            int[] b = new int[n];
-            int i=0;
- 
-            while ((a = Console.ReadLine()) != "end") //Получаем строку и проверяем ее содержание
-                b[i++] = Convert.ToInt32(a); //в стркое нет "конца" - значит конвертим и пишем в массив
-            int count = 0;
-            for (int k = 0; k < i; k++) //вывод заполненных ячеек массива
-            {
-            if (b[k]>0) count++;
-                Console.WriteLine(b[k]);
-            }
-        return count;
-     }
-    Console.WriteLine($"Количество положительных элементов:{countAlements(5)}");
+    // int countAlements(int n)
+    // {
+    // string a;
+    //         int[] b = new int[n];
+    //         for (int i=0; i<n; i++)
+    //         {a = Console.ReadLine();
+    //         b[i] = Convert.ToInt32(a);
+    //         }
+
+    //         // while ((a = Console.ReadLine()) != "end") //Получаем строку и проверяем ее содержание
+    //         //     b[i++] = Convert.ToInt32(a); //в стркое нет "конца" - значит конвертим и пишем в массив
+    //         int count = 0;
+    //         for (int k = 0; k < n; k++) //вывод заполненных ячеек массива
+    //         {
+    //         if (b[k]>0) count++;
+    //             Console.WriteLine(b[k]);
+    //         }
+    //     return count;
+    //  }
+    // Console.WriteLine($"Количество положительных элементов:{countAlements(5)}");
           //  Console.ReadKey(true);
 
 // 43. Написать программу преобразования десятичного числа в двоичное
-// 44. Найти точку пересечения двух прямых заданных уравнением y=k1x+b1, k1 и b2 и k2 заданы
+// 44. Найти точку пересечения двух прямых заданных уравнением y1=k1x1+b1, y2=k2x2+b2 и b2 и k2 заданы
+
+// найти точку (x, y), x=x1=x1, y=y1=y2
+//x=(y-b1)/k1
+//y=k2*(y-b1)/k1+b2 
+//y=k2y/k1-k2b1/k1+b2
+//y(1-k2/k1)=b2-k2b1/k1
+//y=(b2-k2b1/k1)/(1-k2/k1)
+int y (int b2, int k2, int b1, int k1)
+{  
+   int res = (b2-k2*b1/k1)/(1-k2/k1); 
+   int x=(res-b1)/k1;
+   return res;
+}
+Console.WriteLine ($"y={y(2, 5, 5, 6)}, x={x}");
 // 45. Показать числа Фибоначчи
 // 46. Написать программу масштабирования фигуры
 // 47. Написать программу копирования массива
