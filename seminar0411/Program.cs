@@ -834,7 +834,7 @@ int maxArray(int[] array) // Создаем метод для нахождени
     }
     return max;
 }
-Console.WriteLine($"максимальное число в массиве:{maxArray(arr)}");// Вывод макс для проверки
+//Console.WriteLine($"максимальное число в массиве:{maxArray(arr)}");// Вывод макс для проверки
 
 int minArray(int[] array) // Создаем метод для нахождения минимального элемента массива
 
@@ -846,9 +846,9 @@ int minArray(int[] array) // Создаем метод для нахождени
     }
     return min;
 }
-Console.WriteLine($"миниимальное число в массиве:{minArray(arr)}");// Вывод мин для проверки
+//Console.WriteLine($"миниимальное число в массиве:{minArray(arr)}");// Вывод мин для проверки
 
-int diff(int ma, int mi) // Создаем метод для находлени разницы
+int diff(int ma, int mi) // Создаем метод для нахождения разницы
 {
     return ma - mi;
 }
