@@ -897,13 +897,9 @@
 //y=k2y/k1-k2b1/k1+b2
 //y(1-k2/k1)=b2-k2b1/k1
 //y=(b2-k2b1/k1)/(1-k2/k1)
-int y (int b2, int k2, int b1, int k1)
-{  
-   int res = (b2-k2*b1/k1)/(1-k2/k1); 
-   int x=(res-b1)/k1;
-   return res;
-}
-Console.WriteLine ($"y={y(2, 5, 5, 6)}, x={x}");
+
+// double Find ((int b1, int k1) x, (int b2, int k2) y) 
+
 // 45. Показать числа Фибоначчи
 // 46. Написать программу масштабирования фигуры
 // 47. Написать программу копирования массива
