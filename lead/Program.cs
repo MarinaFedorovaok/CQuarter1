@@ -12,8 +12,8 @@ bool triangle(int a, int b, int c) // создание метода провер
 int myReadNum(){
     const int zerro = (int) '0'; // переводим символ в int
     const int nine  = (int) '9';
-    int symb = Console.Read();
-    while (!(zerro <= symb && symb <= nine)) {symb = Console.Read();}
+    int symb = Console.Read(); // Создали буфер
+    while (!(zerro <= symb && symb <= nine)) {symb = Console.Read();} // пока считываем не цифры, продолжаем считывать
     int ans = 0;
     while (zerro <= symb && symb <= nine) // проверяем, число ли это
     {
@@ -24,12 +24,12 @@ int myReadNum(){
     return ans;
 }
 //Console.WriteLine(myReadNum() + 1); // Выводим число+1 (для проверки, что это число)
-int d = myReadNum();
-int e = myReadNum();
-int f = myReadNum();
-Console.WriteLine($"Ответ:{triangle(d, e, f)}");
+// int d = myReadNum();
+// int e = myReadNum();
+// int f = myReadNum();
+// Console.WriteLine($"Ответ:{triangle(d, e, f)}");
 // А можно обойтись и вообще без переменных 
-//Console.WriteLine($"Ответ:{triangle(myReadNum(), myReadNum(), myReadNum())}");
+Console.WriteLine($"Ответ:{triangle(myReadNum(), myReadNum(), myReadNum())}");
 // // Console.WriteLine("Bведите число1"); // ввод чисел с клавиатуры по очереди
 // // int d = int.Parse(Console.ReadLine());
 // // Console.WriteLine("Bведите число2");
