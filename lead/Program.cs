@@ -1,14 +1,35 @@
 ﻿// // Почувствуй себя лидом
 
-// // 41. Выяснить являются ли три числа сторонами треугольника 
-// // Сумма длин двух любых сторон треугольника больше длины оставшейся стороны:
-// // a + b > c
-// // b + c > a
-// // c + a > b
-// bool triangle(int a, int b, int c) // создание метода проверки
-// {
-//     return ((a + b > c) && (b + c > a) && c + a > b);
-// }
+// 41. Выяснить являются ли три числа сторонами треугольника 
+// Сумма длин двух любых сторон треугольника больше длины оставшейся стороны:
+// a + b > c
+// b + c > a
+// c + a > b
+bool triangle(int a, int b, int c) // создание метода проверки
+{
+    return ((a + b > c) && (b + c > a) && c + a > b);
+}
+int myReadNum(){
+    const int zerro = (int) '0'; // переводим символ в int
+    const int nine  = (int) '9';
+    int symb = Console.Read();
+    while (!(zerro <= symb && symb <= nine)) {symb = Console.Read();}
+    int ans = 0;
+    while (zerro <= symb && symb <= nine) // проверяем, число ли это
+    {
+        ans = ans * 10 + (symb-zerro); // Записываем в переменную число. Вычитем ноль из-за кодировки 
+        //Console.WriteLine($"symb = {symb}");
+        symb = Console.Read();
+    }
+    return ans;
+}
+//Console.WriteLine(myReadNum() + 1); // Выводим число+1 (для проверки, что это число)
+int d = myReadNum();
+int e = myReadNum();
+int f = myReadNum();
+Console.WriteLine($"Ответ:{triangle(d, e, f)}");
+// А можно обойтись и вообще без переменных 
+//Console.WriteLine($"Ответ:{triangle(myReadNum(), myReadNum(), myReadNum())}");
 // // Console.WriteLine("Bведите число1"); // ввод чисел с клавиатуры по очереди
 // // int d = int.Parse(Console.ReadLine());
 // // Console.WriteLine("Bведите число2");
@@ -69,20 +90,13 @@
 // int[] arr = Array1(count);
 // FillArray1(arr);
 // Console.Write(PrintArray(arr)); // создали и напечатали массив нужного размера
+//**Метод считывания первого числа из консоли
 
-int myReadNum(){
-    const int zerro = (int) '0';
-    const int nine  = (int) '9';
-    int ans = 0;
-    int symb = Console.Read();
-    while (zerro <= symb && symb <= nine) {
-        ans = ans * 10 + (symb - zerro);
-        Console.WriteLine($"symb = {symb}");
-        symb = Console.Read();
-    }
-    return ans;
-}
-Console.WriteLine(myReadNum() + 1);
+// Способ Рустема
+// String word = Console.ReadLine();
+// string[] alph = word.Split(' ');
+// Console.WriteLine(String.Join(',', alph));
+// числа пробелами должны быть отделены, или запятой если так: word.Split(',');
 
 // 1. Вводим стороку с консоли
 // 2. Определяем длину строки. Создаем массив размером, равным длине этой строки
