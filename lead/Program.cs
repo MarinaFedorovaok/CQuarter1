@@ -17,7 +17,27 @@ bool triangle(int a, int b, int c) // создание метода провер
 // int f = int.Parse(Console.ReadLine());
 // Console.WriteLine($"Ответ:{triangle(d, e, f)}");
 
-            //**********Алгортим решения
+              //*** Может помочь
+             // Замена элементов текста
+    // string text = "We go together";
+
+    // string Replace (string text, char oldValue, char newValue) //(Сhar) — тип данных, предназначенный для хранения одного символа (управляющего или печатного) в определённой кодировке. Может являться как однобайтовым (для стандартной таблицы символов), так и многобайтовым (к примеру, для Юникода). Основным применением является обращение к отдельным знакам строки.
+    // {
+      
+    //     string result = String.Empty;
+    //     int length = text.Length;
+    //     for (int i = 0; i < length; i=i+1)
+    //     {
+    //         if(text[i] == oldValue) result = result + $"{newValue}";
+    //         else result = result + $"{text[i]}";
+
+    //     }
+    // return result;
+    // }
+  
+    // string newText = Replace(text, ' ', '|');
+    // Console.WriteLine(newText);
+////
 int[] Array1(int count) //Создаем массив размером, равным длине строки
 {   
     return new int[count];
