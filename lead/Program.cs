@@ -70,10 +70,10 @@ string PrintArray(int[] array) //Создаем метод выведения м
 // Console.WriteLine($"Ответ:{triangle(myReadNum(), myReadNum(), myReadNum())}");
 
 // 42. Определить сколько чисел больше 0 введено с клавиатуры
-Console.WriteLine("Введите числа через пробел и нажмитие ентер");
-string condition = Console.ReadLine(); //ввели числа
-//PrintArray(stringToNumbers(condition));
-int[] arr = stringToNumbers(condition);
+// Console.WriteLine("Введите числа через пробел и нажмитие ентер");
+// string condition = Console.ReadLine(); //ввели числа
+// //PrintArray(stringToNumbers(condition));
+//int[] arr = stringToNumbers(condition);
 int countArray(int[] array) //Создаем метод подсчета положительных элементов
 {
     int res = 0;
@@ -84,7 +84,7 @@ int countArray(int[] array) //Создаем метод подсчета пол�
     return res;
 }
 
-Console.WriteLine($"Положительных элементов {countArray(arr)}");
+//Console.WriteLine($"Положительных элементов {countArray(arr)}");
 
 
 // 43. Написать программу преобразования десятичного числа в двоичное
@@ -108,7 +108,10 @@ double FindX (int b1, int k1, int b2, int k2) // метод ищет x
     if (k1==0) return 0;
     return (FindY(b1,k1,b2,k2)-b1)/k1;
 }
-Console.WriteLine ($"x={FindX(2, 3, 4, 5)}, y= {FindY(2, 3, 4, 5)}");
+Console.WriteLine("Введите b1,  k1,  b2,  k2 через пробел и нажмитие ентер");
+string condition = Console.ReadLine(); //ввели числа
+int[] arr = stringToNumbers(condition);
+Console.WriteLine ($"x={FindX(arr[0], arr[1], arr[2], arr[3])}, y= {FindY(arr[0], arr[1], arr[2], arr[3])}");
 // 45. Показать числа Фибоначчи
 // 46. Написать программу масштабирования фигуры
 // 47. Написать программу копирования массива
