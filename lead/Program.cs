@@ -98,20 +98,26 @@ int countArray(int[] array) //Создаем метод подсчета пол�
 // y=(k1b2-k2b1)/(k1-k2)
 
 
-double FindY (int b1, int k1, int b2, int k2) // метод ищет y
+double FindY(int b1, int k1, int b2, int k2) // метод ищет y
 {
-    if ((k1-k2)==0) return 0;
-    return (k1*b2-k2*b1)/(k1-k2);
+    if ((k1 - k2) == 0) return 0;
+    return (k1 * b2 - k2 * b1) / (k1 - k2);
 }
-double FindX (int b1, int k1, int b2, int k2) // метод ищет x
+double FindX(int b1, int k1, int b2, int k2) // метод ищет x
 {
-    if (k1==0) return 0;
-    return (FindY(b1,k1,b2,k2)-b1)/k1;
+    return (FindY(b1, k1, b2, k2) - b1) / k1;
 }
 Console.WriteLine("Введите b1,  k1,  b2,  k2 через пробел и нажмитие ентер");
 string condition = Console.ReadLine(); //ввели числа
 int[] arr = stringToNumbers(condition);
-Console.WriteLine ($"x={FindX(arr[0], arr[1], arr[2], arr[3])}, y= {FindY(arr[0], arr[1], arr[2], arr[3])}");
+int b1 = arr[0];
+int b2 = arr[2];
+int k1 = arr[1];
+int k2 = arr[3];
+if ((k1 - k2) == 0)
+    Console.WriteLine("Прямые параллельны");
+else
+    Console.WriteLine($"x={FindX(b1, k1, b2, k2)}, y= {FindY(b1, k1, b2, k2)}");
 // 45. Показать числа Фибоначчи
 // 46. Написать программу масштабирования фигуры
 // 47. Написать программу копирования массива
