@@ -37,10 +37,10 @@ string PrintArray(int[] array) //Создаем метод выведения м
     }
     return res;
 }
-int[] arr = Array1(count); //создали массив arr 
-FillArray1(arr); // наполнили его 
+//int[] arr = Array1(count); //создали массив arr 
+//FillArray1(arr); // наполнили его 
 //Console.Write(PrintArray(arr)); // напечатали массив нужного размера
-Console.WriteLine($"The numbers are the sides of a triangle, these are:{triangle(arr[0], arr[1], arr[2])}"); // напечатали ответ
+//Console.WriteLine($"The numbers are the sides of a triangle, these are:{triangle(arr[0], arr[1], arr[2])}"); // вызвали и напечатали ответ
 
 
 //**алгоритм:
@@ -48,6 +48,7 @@ Console.WriteLine($"The numbers are the sides of a triangle, these are:{triangle
 // 1. Вводим стороку с консоли
 // 2. Ищем в сроке пробелы, куски до пробелов засовывем в отдельные строки
 // 3. Строки переводим в числа и засовываем числа в массив
+// 4. Берем для решения первые 3 числа массива
 
                     
                     // Вариант Ник..
@@ -74,6 +75,21 @@ Console.WriteLine($"The numbers are the sides of a triangle, these are:{triangle
 // Console.WriteLine($"Ответ:{triangle(myReadNum(), myReadNum(), myReadNum())}");
 
 // 42. Определить сколько чисел больше 0 введено с клавиатуры
+int[] arr = Array1(count); //создали массив arr 
+FillArray1(arr); // наполнили его числами
+int countArray(int[] array) //Создаем метод подсчета положительных элементов
+{
+    int res = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i]>0) res++;
+    }
+    return res;
+}
+Console.WriteLine($"Полодительных элементов {countArray(arr)}");
+//Console.Write(PrintArray(arr)); // напечатали массив нужного размера
+
+                        //Первое решение с семинара:
 // int countAlements(int n)
 // {
 // string a;
