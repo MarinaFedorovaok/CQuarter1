@@ -9,25 +9,17 @@ bool triangle(int a, int b, int c) // создание метода провер
 {
     return ((a + b > c) && (b + c > a) && c + a > b);
 }
-
-Console.WriteLine("Введите числа через пробел и нажмитие ентер");
-string condition = Console.ReadLine(); //ввели числа
-string[] text = condition.Split(' '); // Создали массив подстрок (каждое число - набор символов)
-
-int count = text.Length; // узнали количество элементов массив
-int[] Array1(int count) //Создаем массив нужного размера
+int[] stringToNumbers(string s) //метод перевода строки в массив чисел
 {
-    return new int[count];
-}
-
-void FillArray1(int[] array) // Создаем метод заполения массива числами
-{
-    for (int i = 0; i < array.Length; i++)
+    string[] text = s.Split(' '); // Создали массив подстрок (каждое число - набор символов)  
+    int[] arr = new int[text.Length]; //создали массив arr размером по количеству строчных кусочков
+    for (int i = 0; i < text.Length; i++)
     {
-        array[i] = Int32.Parse(text[i]); // переводим каждый элемент массива строк в числа
-    }
-}
+        arr[i] = Int32.Parse(text[i]); // переводим каждый элемент массива строк в числа
 
+    }
+    return arr;
+}
 string PrintArray(int[] array) //Создаем метод выведения массива на экран в строку
 {
     string res = String.Empty;
@@ -35,12 +27,15 @@ string PrintArray(int[] array) //Создаем метод выведения м
     {
         res += $"{array[i]} ";
     }
+    Console.WriteLine(res);
     return res;
 }
-//int[] arr = Array1(count); //создали массив arr 
-//FillArray1(arr); // наполнили его 
-//Console.Write(PrintArray(arr)); // напечатали массив нужного размера
-//Console.WriteLine($"The numbers are the sides of a triangle, these are:{triangle(arr[0], arr[1], arr[2])}"); // вызвали и напечатали ответ
+
+Console.WriteLine("Введите числа через пробел и нажмитие ентер");
+string condition = Console.ReadLine(); //ввели числа
+//PrintArray(stringToNumbers(condition));
+int[] arr = stringToNumbers(condition);
+Console.WriteLine($"The numbers are the sides of a triangle, these are:{triangle(arr[0], arr[1], arr[2])}"); // вызвали и напечатали ответ
 
 
 //**алгоритм:
@@ -75,18 +70,18 @@ string PrintArray(int[] array) //Создаем метод выведения м
 // Console.WriteLine($"Ответ:{triangle(myReadNum(), myReadNum(), myReadNum())}");
 
 // 42. Определить сколько чисел больше 0 введено с клавиатуры
-int[] arr = Array1(count); //создали массив arr 
-FillArray1(arr); // наполнили его числами
-int countArray(int[] array) //Создаем метод подсчета положительных элементов
-{
-    int res = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] > 0) res++;
-    }
-    return res;
-}
-Console.WriteLine($"Полодительных элементов {countArray(arr)}");
+// int[] arr = Array1(count); //создали массив arr 
+// FillArray1(arr); // наполнили его числами
+// int countArray(int[] array) //Создаем метод подсчета положительных элементов
+// {
+//     int res = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] > 0) res++;
+//     }
+//     return res;
+// }
+// Console.WriteLine($"Полодительных элементов {countArray(arr)}");
 
 
 // 43. Написать программу преобразования десятичного числа в двоичное
