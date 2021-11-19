@@ -91,23 +91,24 @@ Console.WriteLine($"Положительных элементов {countArray(ar
 // 44. Найти точку пересечения двух прямых заданных уравнением y1=k1x1+b1, y2=k2x2+b2 и b2 и k2 заданы
 
 // найти точку (x, y), x=x1=x1, y=y1=y2
-//x=(y-b1)/k1
-//y=k2*(y-b1)/k1+b2 
-//y=k2y/k1-k2b1/k1+b2
-//y(1-k2/k1)=b2-k2b1/k1
-//y=(b2-k2b1/k1)/(1-k2/k1)
+// x=(y-b1)/k1
+// y=k2*(y-b1)/k1+b2 
+// y=k2y/k1-k2b1/k1+b2
+// y(1-k2/k1)=b2-k2b1/k1
+// y=(k1b2-k2b1)/(k1-k2)
 
-// double Find ((int b1, int k1) x, (int b2, int k2) y) 
-//double[] FuncPow(int n) 
-// { 
-//     double [] array = new double [n]; 
-//     for(int i = 1; i <= n; i++) 
-//     { 
-//         array[i - 1] = Math.Pow(i, 2); 
-//     } 
-//     return array; 
-// } 
 
+double FindY (int b1, int k1, int b2, int k2) // метод ищет y
+{
+    if ((k1-k2)==0) return 0;
+    return (k1*b2-k2*b1)/(k1-k2);
+}
+double FindX (int b1, int k1, int b2, int k2) // метод ищет x
+{
+    if (k1==0) return 0;
+    return (FindY(b1,k1,b2,k2)-b1)/k1;
+}
+Console.WriteLine ($"x={FindX(2, 3, 4, 5)}, y= {FindY(2, 3, 4, 5)}");
 // 45. Показать числа Фибоначчи
 // 46. Написать программу масштабирования фигуры
 // 47. Написать программу копирования массива
