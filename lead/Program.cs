@@ -31,11 +31,11 @@ string PrintArray(int[] array) //Создаем метод выведения м
     return res;
 }
 
-Console.WriteLine("Введите числа через пробел и нажмитие ентер");
-string condition = Console.ReadLine(); //ввели числа
-//PrintArray(stringToNumbers(condition));
-int[] arr = stringToNumbers(condition);
-Console.WriteLine($"The numbers are the sides of a triangle, these are:{triangle(arr[0], arr[1], arr[2])}"); // вызвали и напечатали ответ
+// Console.WriteLine("Введите числа через пробел и нажмитие ентер");
+// string condition = Console.ReadLine(); //ввели числа
+// //PrintArray(stringToNumbers(condition));
+// int[] arr = stringToNumbers(condition);
+// Console.WriteLine($"The numbers are the sides of a triangle, these are:{triangle(arr[0], arr[1], arr[2])}"); // вызвали и напечатали ответ
 
 
 //**алгоритм:
@@ -70,18 +70,21 @@ Console.WriteLine($"The numbers are the sides of a triangle, these are:{triangle
 // Console.WriteLine($"Ответ:{triangle(myReadNum(), myReadNum(), myReadNum())}");
 
 // 42. Определить сколько чисел больше 0 введено с клавиатуры
-// int[] arr = Array1(count); //создали массив arr 
-// FillArray1(arr); // наполнили его числами
-// int countArray(int[] array) //Создаем метод подсчета положительных элементов
-// {
-//     int res = 0;
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         if (array[i] > 0) res++;
-//     }
-//     return res;
-// }
-// Console.WriteLine($"Полодительных элементов {countArray(arr)}");
+Console.WriteLine("Введите числа через пробел и нажмитие ентер");
+string condition = Console.ReadLine(); //ввели числа
+//PrintArray(stringToNumbers(condition));
+int[] arr = stringToNumbers(condition);
+int countArray(int[] array) //Создаем метод подсчета положительных элементов
+{
+    int res = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > 0) res++;
+    }
+    return res;
+}
+
+Console.WriteLine($"Положительных элементов {countArray(arr)}");
 
 
 // 43. Написать программу преобразования десятичного числа в двоичное
