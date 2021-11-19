@@ -9,104 +9,69 @@ bool triangle(int a, int b, int c) // создание метода провер
 {
     return ((a + b > c) && (b + c > a) && c + a > b);
 }
-int myReadNum(){
-    const int zerro = (int) '0'; // переводим символ в int
-    const int nine  = (int) '9';
-    int symb = Console.Read(); // Создали буфер
-    while (!(zerro <= symb && symb <= nine)) {symb = Console.Read();} // пока считываем не цифры, продолжаем считывать
-    int ans = 0;
-    while (zerro <= symb && symb <= nine) // проверяем, число ли это
-    {
-        ans = ans * 10 + (symb-zerro); // Записываем в переменную число. Вычитем ноль из-за кодировки 
-        //Console.WriteLine($"symb = {symb}");
-        symb = Console.Read();
-    }
-    return ans;
+
+Console.WriteLine("Введите числа через пробел и нажмитие ентер");
+string condition = Console.ReadLine(); //ввели числа
+string[] text = condition.Split(' '); // Создали массив подстрок (каждое число - набор символов)
+
+int count = text.Length; // узнали количество элементов массив
+int[] Array1(int count) //Создаем массив нужного размера
+{   
+    return new int[count];
 }
-//Console.WriteLine(myReadNum() + 1); // Выводим число+1 (для проверки, что это число)
-// int d = myReadNum();
-// int e = myReadNum();
-// int f = myReadNum();
-// Console.WriteLine($"Ответ:{triangle(d, e, f)}");
-// А можно обойтись и вообще без переменных 
-Console.WriteLine($"Ответ:{triangle(myReadNum(), myReadNum(), myReadNum())}");
-// // Console.WriteLine("Bведите число1"); // ввод чисел с клавиатуры по очереди
-// // int d = int.Parse(Console.ReadLine());
-// // Console.WriteLine("Bведите число2");
-// // int e = int.Parse(Console.ReadLine());
-// // Console.WriteLine("Bведите число3");
-// // int f = int.Parse(Console.ReadLine());
-// // Console.WriteLine($"Ответ:{triangle(d, e, f)}");
 
-//               //*** Может помочь
-//              // Замена элементов текста
-//     // string text = "We go together";
+void FillArray1(int[] array) // Создаем метод заполения массива числами
+{
+     for (int i = 0; i < array.Length; i++)
+    {
+             array[i] = Int32.Parse(text[i]); // переводим каждый элемент массива строк в числа
+    }
+}
 
-//     // string Replace (string text, char oldValue, char newValue) //(Сhar) — тип данных, предназначенный для хранения одного символа (управляющего или печатного) в определённой кодировке. Может являться как однобайтовым (для стандартной таблицы символов), так и многобайтовым (к примеру, для Юникода). Основным применением является обращение к отдельным знакам строки.
-//     // {
-      
-//     //     string result = String.Empty;
-//     //     int length = text.Length;
-//     //     for (int i = 0; i < length; i=i+1)
-//     //     {
-//     //         if(text[i] == oldValue) result = result + $"{newValue}";
-//     //         else result = result + $"{text[i]}";
+string PrintArray(int[] array) //Создаем метод выведения массива на экран в строку
+{
+    string res = String.Empty;
+    for (int i = 0; i < array.Length; i++)
+    {
+        res += $"{array[i]} ";
+    }
+    return res;
+}
+int[] arr = Array1(count); //создали массив arr 
+FillArray1(arr); // наполнили его 
+//Console.Write(PrintArray(arr)); // напечатали массив нужного размера
+Console.WriteLine($"The numbers are the sides of a triangle, these are:{triangle(arr[0], arr[1], arr[2])}"); // напечатали ответ
 
-//     //     }
-//     // return result;
-//     // }
-  
-//     // string newText = Replace(text, ' ', '|');
-//     // Console.WriteLine(newText);
-// ////
-// int[] Array1(int count) //Создаем массив размером, равным длине строки
-// {   
-//     return new int[count];
-// }
 
-// Console.WriteLine("Введите числа через пробел");
-// string condition = Console.ReadLine(); //ввели числа в строку
-// int count = condition.Length; // узнали количество символов
-
-// void FillArray1(int[] array) // Создаем метод заполения массива знаками 
-// {
-//    // int zero = Convert.ToInt32('0');
-//        for (int i = 0; i < array.Length; i++)
-//     {
-//         //array[i] = Convert.ToInt32(condition[i]) - zero;
-//         array[i] = condition[i];
-//     }
-// }
-
-// string PrintArray(int[] array) //Создаем метод выведения массива на экран в строку
-// {
-//     string res = String.Empty;
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         res += $"{array[i]} ";
-//     }
-//     return res;
-// }
-// int[] arr = Array1(count);
-// FillArray1(arr);
-// Console.Write(PrintArray(arr)); // создали и напечатали массив нужного размера
-//**Метод считывания первого числа из консоли
-
-// Способ Рустема
-// String word = Console.ReadLine();
-// string[] alph = word.Split(' ');
-// Console.WriteLine(String.Join(',', alph));
-// числа пробелами должны быть отделены, или запятой если так: word.Split(',');
+//**алгоритм:
 
 // 1. Вводим стороку с консоли
-// 2. Определяем длину строки. Создаем массив размером, равным длине этой строки
-// 3. В массив помещаем все символы по одному
-// 4. создаем итоговый массив
-// 5. В итоговый массив помещаем числа таким образом: 
-//  - первое число - все знаки до пробела (преобразуем в число)
-//  - второе число  -опять все знаки до пробела
-//  6. На выходе - массив чисел
+// 2. Ищем в сроке пробелы, куски до пробелов засовывем в отдельные строки
+// 3. Строки переводим в числа и засовываем числа в массив
 
+                    
+                    // Вариант Ник..
+// int myReadNum(){
+//     const int zerro = (int) '0'; // переводим символ в int
+//     const int nine  = (int) '9';
+//     int symb = Console.Read(); // Создали буфер
+//     while (!(zerro <= symb && symb <= nine)) {symb = Console.Read();} // пока считываем не цифры, продолжаем считывать
+//     int ans = 0;
+//     while (zerro <= symb && symb <= nine) // проверяем, число ли это
+//     {
+//         ans = ans * 10 + (symb-zerro); // Записываем в переменную число. Вычитем ноль из-за кодировки 
+//         //Console.WriteLine($"symb = {symb}");
+//         symb = Console.Read();
+//     }
+//     return ans;
+// }
+// //Console.WriteLine(myReadNum() + 1); // Выводим число+1 (для проверки, что это число)
+// // int d = myReadNum();
+// // int e = myReadNum();
+// // int f = myReadNum();
+// // Console.WriteLine($"Ответ:{triangle(d, e, f)}");
+// // А можно обойтись и вообще без переменных 
+// Console.WriteLine($"Ответ:{triangle(myReadNum(), myReadNum(), myReadNum())}");
 
 // 42. Определить сколько чисел больше 0 введено с клавиатуры
 // int countAlements(int n)
