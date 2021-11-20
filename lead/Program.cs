@@ -147,45 +147,7 @@
 // }
 // 46. Написать программу масштабирования фигуры
 // Исходные данные:  фигура нарисована пикселями и надо нарисовать в н раз большую?
-// int [,] pic = new int[,]
-// {
-//     {0, 1, 1, 1, 0},
-//     {0, 1, 0, 1, 0},
-//     {1, 0, 0, 1, 0},
-//     {0, 1, 0, 1, 0},
-//     {0, 0, 1, 1, 0},
-//     {0, 0, 0, 0, 0},
-// };
-// void PrintImage(int[,] pic)
-// {
 
-//     for (int i = 0; i < pic.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < pic.GetLongLength(1); j++)
-//         {
-//             //Console.Write($"{matr[i, j]} ");
-//             if(pic[i,j] ==0) Console.Write(" ");
-//             else Console.Write("*");
-
-//         }
-//         Console.WriteLine();
-//     }
-// }
-// void FillImage(int row, int col)
-// {
-//     if (pic[row, col] ==0)
-//     {
-//         pic[row, col] = 8;
-//         FillImage(row-1,col);
-//         FillImage(row,col-1);
-//         FillImage(row+1,col);
-//         FillImage(row,col+1);
-//     }
-// }
-
-// PrintImage(pic);
-// FillImage(1,2);
-// PrintImage(pic);
 
 int[,] pic = new int[,]
 {
