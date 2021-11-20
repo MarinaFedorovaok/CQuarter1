@@ -148,34 +148,33 @@
 // 46. Написать программу масштабирования фигуры
 // Исходные данные:  фигура нарисована пикселями и надо нарисовать в н раз большую?
 
-
 int[,] pic = new int[,]
 {
-    {0, 0, 1, 0, 0},
+    {0, 0, 0, 0, 0},
+    {0, 1, 0, 1, 0},
+    {0, 0, 0, 0, 0},
+    {1, 0, 0, 0, 1},
     {0, 1, 1, 1, 0},
-    {0, 1, 1, 1, 0},
-    {0, 1, 1, 1, 0},
-    {0, 0, 1, 0, 0},
     {0, 0, 0, 0, 0},
 };
 
-// void PrintImage1(int[,] pic) //Cоздаем метод выведения фигуры в первом массиве
-// {
-//     for (int i = 0; i < pic.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < pic.GetLongLength(1); j++)
-//         {
-//             //Console.Write($"{matr[i, j]} ");
-//             if (pic[i, j] == 0) Console.Write(" ");
-//             else Console.Write("*");
+void PrintImage1(int[,] pic) //Cоздаем метод выведения фигуры в первом массиве
+{
+    for (int i = 0; i < pic.GetLength(0); i++)
+    {
+        for (int j = 0; j < pic.GetLongLength(1); j++)
+        {
+            //Console.Write($"{matr[i, j]} ");
+            if (pic[i, j] == 0) Console.Write(" ");
+            else Console.Write("@");
 
-//         }
-//         Console.WriteLine();
-//     }
-// }
+        }
+        Console.WriteLine();
+    }
+}
+PrintImage1(pic);
 
-//int[] arr = { 1, 2, 3 };
-int n = 2;
+int n = 4;
 for (int i = 0; i < pic.GetLength(0); i++)
 {
     for (int m = 0; m < n; m++)
@@ -183,15 +182,14 @@ for (int i = 0; i < pic.GetLength(0); i++)
         for (int j = 0; j < pic.GetLength(1); j++)
         {
             for (int k = 0; k < n; k++)
-                Console.Write(pic[i, j]);
+            {
+                if (pic[i, j] == 0) Console.Write(" ");
+                else Console.Write("@");
+            }
         }
         Console.WriteLine();
     }
 }
-// Console.WriteLine();
-// PrintImage1(pic);
-// Console.WriteLine();
-// //PrintImage2(pic, 2);
 
 
 // 47. Написать программу копирования массива
