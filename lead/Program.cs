@@ -74,20 +74,37 @@ string PrintArray(int[] array) //Создаем метод выведения м
 // string condition = Console.ReadLine(); //ввели числа
 // //PrintArray(stringToNumbers(condition));
 //int[] arr = stringToNumbers(condition);
-int countArray(int[] array) //Создаем метод подсчета положительных элементов
-{
-    int res = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] > 0) res++;
-    }
-    return res;
-}
+// int countArray(int[] array) //Создаем метод подсчета положительных элементов
+// {
+//     int res = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] > 0) res++;
+//     }
+//     return res;
+// }
 
 //Console.WriteLine($"Положительных элементов {countArray(arr)}");
 
 
 // 43. Написать программу преобразования десятичного числа в двоичное
+int[] transfArray(int n, int k) //метод создания массива из десятичного числа в любую систему с основанием k
+{
+    int s = n;
+    int x = 0;
+    int num = (int)Math.Log(n, k) + 1;//узнаем количество элементов в массиве с учетом количества знаков итогового числа в системе с основанием к
+    int[] arr = new int[num];//создаем массив
+    while (s > 0)
+    {
+        x = s % k;
+        s = s / k;
+        arr[num - 1] = x; // положили остаток в последний элемент массива
+        Console.WriteLine($"x = {x};\ts = {s}");
+        if (num > 0) num = num - 1;
+    }
+    return arr;
+}
+PrintArray(transfArray(5, 2));
 // 44. Найти точку пересечения двух прямых заданных уравнением y1=k1x1+b1, y2=k2x2+b2 и b2 и k2 заданы
 
 // найти точку (x, y), x=x1=x1, y=y1=y2
@@ -98,26 +115,26 @@ int countArray(int[] array) //Создаем метод подсчета пол�
 // y=(k1b2-k2b1)/(k1-k2)
 
 
-double FindY(int b1, int k1, int b2, int k2) // метод ищет y
-{
-    if ((k1 - k2) == 0) return 0;
-    return (k1 * b2 - k2 * b1) / (k1 - k2);
-}
-double FindX(int b1, int k1, int b2, int k2) // метод ищет x
-{
-    return (FindY(b1, k1, b2, k2) - b1) / k1;
-}
-Console.WriteLine("Введите b1,  k1,  b2,  k2 через пробел и нажмитие ентер");
-string condition = Console.ReadLine(); //ввели числа
-int[] arr = stringToNumbers(condition);
-int b1 = arr[0];
-int b2 = arr[2];
-int k1 = arr[1];
-int k2 = arr[3];
-if ((k1 - k2) == 0)
-    Console.WriteLine("Прямые параллельны");
-else
-    Console.WriteLine($"x={FindX(b1, k1, b2, k2)}, y= {FindY(b1, k1, b2, k2)}");
+// double FindY(int b1, int k1, int b2, int k2) // метод ищет y
+// {
+//     if ((k1 - k2) == 0) return 0;
+//     return (k1 * b2 - k2 * b1) / (k1 - k2);
+// }
+// double FindX(int b1, int k1, int b2, int k2) // метод ищет x
+// {
+//     return (FindY(b1, k1, b2, k2) - b1) / k1;
+// }
+// Console.WriteLine("Введите b1,  k1,  b2,  k2 через пробел и нажмитие ентер");
+// string condition = Console.ReadLine(); //ввели числа
+// int[] arr = stringToNumbers(condition);
+// int b1 = arr[0];
+// int b2 = arr[2];
+// int k1 = arr[1];
+// int k2 = arr[3];
+// if ((k1 - k2) == 0)
+//     Console.WriteLine("Прямые параллельны");
+// else
+//     Console.WriteLine($"x={FindX(b1, k1, b2, k2)}, y= {FindY(b1, k1, b2, k2)}");
 // 45. Показать числа Фибоначчи
 // 46. Написать программу масштабирования фигуры
 // 47. Написать программу копирования массива
