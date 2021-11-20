@@ -136,5 +136,14 @@ int[] transfArray(int n, int k) //метод создания массива и�
 // else
 //     Console.WriteLine($"x={FindX(b1, k1, b2, k2)}, y= {FindY(b1, k1, b2, k2)}");
 // 45. Показать числа Фибоначчи
+int Fibbonacci(int n)
+{
+    if (n == 1 ||n == 2 ) return 1;
+    else return Fibbonacci(n-1) + Fibbonacci(n-2);
+}
+for (int i = 1; i<10;i++)
+{
+    Console.WriteLine (Fibbonacci(i));
+}
 // 46. Написать программу масштабирования фигуры
 // 47. Написать программу копирования массива
