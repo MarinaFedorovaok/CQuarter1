@@ -146,50 +146,90 @@
 //     Console.WriteLine(Fibbonacci(10));
 // }
 // 46. Написать программу масштабирования фигуры
+// Исходные данные:  фигура нарисована пикселями и надо нарисовать в н раз большую?
+// int [,] pic = new int[,]
+// {
+//     {0, 1, 1, 1, 0},
+//     {0, 1, 0, 1, 0},
+//     {1, 0, 0, 1, 0},
+//     {0, 1, 0, 1, 0},
+//     {0, 0, 1, 1, 0},
+//     {0, 0, 0, 0, 0},
+// };
+// void PrintImage(int[,] pic)
+// {
+
+//     for (int i = 0; i < pic.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < pic.GetLongLength(1); j++)
+//         {
+//             //Console.Write($"{matr[i, j]} ");
+//             if(pic[i,j] ==0) Console.Write(" ");
+//             else Console.Write("*");
+
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// void FillImage(int row, int col)
+// {
+//     if (pic[row, col] ==0)
+//     {
+//         pic[row, col] = 8;
+//         FillImage(row-1,col);
+//         FillImage(row,col-1);
+//         FillImage(row+1,col);
+//         FillImage(row,col+1);
+//     }
+// }
+
+// PrintImage(pic);
+// FillImage(1,2);
+// PrintImage(pic);
 
 int[,] pic = new int[,]
 {
+    {0, 0, 1, 0, 0},
     {0, 1, 1, 1, 0},
-    {0, 1, 0, 1, 0},
-    {1, 0, 0, 1, 0},
-    {0, 1, 0, 1, 0},
-    {0, 0, 1, 1, 0},
+    {0, 1, 1, 1, 0},
+    {0, 1, 1, 1, 0},
+    {0, 0, 1, 0, 0},
     {0, 0, 0, 0, 0},
 };
-void PrintScalingImage(int[,] pic, int n)
+
+// void PrintImage1(int[,] pic) //Cоздаем метод выведения фигуры в первом массиве
+// {
+//     for (int i = 0; i < pic.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < pic.GetLongLength(1); j++)
+//         {
+//             //Console.Write($"{matr[i, j]} ");
+//             if (pic[i, j] == 0) Console.Write(" ");
+//             else Console.Write("*");
+
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+//int[] arr = { 1, 2, 3 };
+int n = 2;
+for (int i = 0; i < pic.GetLength(0); i++)
 {
-
-    for (int i = 0; i < pic.GetLength(0); i++)
+    for (int m = 0; m < n; m++)
     {
-        for (int j = 0; j < pic.GetLongLength(1); j++)
+        for (int j = 0; j < pic.GetLength(1); j++)
         {
-
-            if (pic[i, j] == 0)
-            {
-                while (n >= 0)
-                {
-                    Console.Write(" ");
-                    n = n - 1;
-                }
-            }
-
-            else
-            {
-                while (n >= 0)
-                {
-                    Console.Write(" ");
-                    n = n - 1;
-                }
-                Console.Write("*");
-            }
-
+            for (int k = 0; k < n; k++)
+                Console.Write(pic[i, j]);
         }
         Console.WriteLine();
     }
 }
-
-
-PrintScalingImage(pic, 2);
+// Console.WriteLine();
+// PrintImage1(pic);
+// Console.WriteLine();
+// //PrintImage2(pic, 2);
 
 
 // 47. Написать программу копирования массива
