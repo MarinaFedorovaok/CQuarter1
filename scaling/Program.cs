@@ -3,7 +3,7 @@
 
 int[,] pic = new int[,]
 {
-    {1, 0, 1, 1, 0},
+    {0, 0, 0, 0, 0},
     {0, 1, 0, 1, 0},
     {0, 0, 0, 0, 0},
     {1, 0, 0, 0, 1},
@@ -36,7 +36,18 @@ void PrintScalingRow(int[,] pic, int NumROW, int n) //Cоздаем метод �
         {
             if (pic[NumROW, i] == 0) Console.Write(" ");
             else Console.Write("@");
+           
         }
-    }
+    }  Console.WriteLine();//Переводим строку
 }
-PrintScalingRow(pic, 0, 2); // масштабируем первую строку
+void PrintScalingColumn(int[,] pic, int n)
+{
+for (int j = 0; j<pic.GetLength(0); j++) //задаем счетчик строк
+{   
+    for (int k=0; k<n; k++) //Задаем счетчик повтора строк
+    PrintScalingRow(pic, j, n);
+
+ }
+}
+PrintScalingColumn(pic, 5);
+//PrintScalingRow(pic, 0, 2); // масштабируем первую строку
