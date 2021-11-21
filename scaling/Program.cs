@@ -50,4 +50,4 @@ for (int j = 0; j<pic.GetLength(0); j++) //задаем счетчик стро�
  }
 }
 PrintScalingColumn(pic, 5);
-//PrintScalingRow(pic, 0, 2); // масштабируем первую строку
+
