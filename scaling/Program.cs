@@ -40,7 +40,7 @@ void PrintScalingRow(int[,] pic, int NumROW, int n) //Cоздаем метод �
         }
     }  Console.WriteLine();//Переводим строку
 }
-void PrintScalingColumn(int[,] pic, int n)
+void PrintScaling(int[,] pic, int n)
 {
 for (int j = 0; j<pic.GetLength(0); j++) //задаем счетчик строк
 {   
@@ -49,5 +49,5 @@ for (int j = 0; j<pic.GetLength(0); j++) //задаем счетчик стро�
 
  }
 }
-PrintScalingColumn(pic, 5);
+PrintScaling(pic, 4);
 
