@@ -32,22 +32,23 @@ void PrintScalingRow(int[,] pic, int NumROW, int n) //Cоздаем метод �
 {
     for (int i = 0; i < pic.GetLength(1); i++) //проверяем выход за строку
     {
-        for (int m = 0; m<n; m++) //задаем счетчик масштабирования
+        for (int m = 0; m < n; m++) //задаем счетчик масштабирования
         {
             if (pic[NumROW, i] == 0) Console.Write(" ");
             else Console.Write("@");
-           
+
         }
-    }  Console.WriteLine();//Переводим строку
+    }
+    Console.WriteLine();//Переводим строку
 }
 void PrintScaling(int[,] pic, int n)
 {
-for (int j = 0; j<pic.GetLength(0); j++) //задаем счетчик строк
-{   
-    for (int k=0; k<n; k++) //Задаем счетчик повтора строк
-    PrintScalingRow(pic, j, n);
+    for (int j = 0; j < pic.GetLength(0); j++) //задаем счетчик строк
+    {
+        for (int k = 0; k < n; k++) //Задаем счетчик повтора строк
+            PrintScalingRow(pic, j, n);
 
- }
+    }
 }
 PrintScaling(pic, 4);
 

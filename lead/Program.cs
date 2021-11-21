@@ -20,16 +20,16 @@
 //     }
 //     return arr;
 // }
-// string PrintArray(int[] array) //Создаем метод выведения массива на экран в строку
-// {
-//     string res = String.Empty;
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         res += $"{array[i]} ";
-//     }
-//     Console.WriteLine(res);
-//     return res;
-// }
+string PrintArray(int[] array) //Создаем метод выведения массива на экран в строку
+{
+    string res = String.Empty;
+    for (int i = 0; i < array.Length; i++)
+    {
+        res += $"{array[i]} ";
+    }
+    Console.WriteLine(res);
+    return res;
+}
 
 // Console.WriteLine("Введите числа через пробел и нажмитие ентер");
 // string condition = Console.ReadLine(); //ввели числа
@@ -148,48 +148,60 @@
 // 46. Написать программу масштабирования фигуры
 // Исходные данные:  фигура нарисована пикселями и надо нарисовать в н раз большую?
 
-int[,] pic = new int[,]
-{
-    {0, 0, 0, 0, 0},
-    {0, 1, 0, 1, 0},
-    {0, 0, 0, 0, 0},
-    {1, 0, 0, 0, 1},
-    {0, 1, 1, 1, 0},
-    {0, 0, 0, 0, 0},
-};
+// int[,] pic = new int[,]
+// {
+//     {0, 0, 0, 0, 0},
+//     {0, 1, 0, 1, 0},
+//     {0, 0, 0, 0, 0},
+//     {1, 0, 0, 0, 1},
+//     {0, 1, 1, 1, 0},
+//     {0, 0, 0, 0, 0},
+// };
 
-void PrintImage1(int[,] pic) //Cоздаем метод выведения фигуры в первом массиве
-{
-    for (int i = 0; i < pic.GetLength(0); i++)
-    {
-        for (int j = 0; j < pic.GetLongLength(1); j++)
-        {
-            //Console.Write($"{matr[i, j]} ");
-            if (pic[i, j] == 0) Console.Write(" ");
-            else Console.Write("@");
+// void PrintImage1(int[,] pic) //Cоздаем метод выведения фигуры в первом массиве
+// {
+//     for (int i = 0; i < pic.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < pic.GetLongLength(1); j++)
+//         {
+//             //Console.Write($"{matr[i, j]} ");
+//             if (pic[i, j] == 0) Console.Write(" ");
+//             else Console.Write("@");
 
-        }
-        Console.WriteLine();
-    }
-}
-PrintImage1(pic);
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// PrintImage1(pic);
 
-int n = 4;
-for (int i = 0; i < pic.GetLength(0); i++)
-{
-    for (int m = 0; m < n; m++)
-    {
-        for (int j = 0; j < pic.GetLength(1); j++)
-        {
-            for (int k = 0; k < n; k++)
-            {
-                if (pic[i, j] == 0) Console.Write(" ");
-                else Console.Write("@");
-            }
-        }
-        Console.WriteLine();
-    }
-}
+// int n = 4;
+// for (int i = 0; i < pic.GetLength(0); i++)
+// {
+//     for (int m = 0; m < n; m++)
+//     {
+//         for (int j = 0; j < pic.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < n; k++)
+//             {
+//                 if (pic[i, j] == 0) Console.Write(" ");
+//                 else Console.Write("@");
+//             }
+//         }
+//         Console.WriteLine();
+//     }
+// }
 
 
 // 47. Написать программу копирования массива
+int[] DoubleArr(int[] array)//метод копирования массива
+{
+    int[] Arr1 = new int[array.Length];
+    for (int i = 0; i < Arr1.Length; i++)
+    {
+        Arr1[i] = array[i];
+    }
+    return Arr1;
+}
+int[] arr = {1, 2, 3, 4};
+PrintArray(DoubleArr(arr));
+PrintArray(DoubleArr(arr));
