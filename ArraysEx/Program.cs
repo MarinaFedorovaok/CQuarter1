@@ -1,30 +1,31 @@
 ﻿// Двумерные массивы
 // 48. Показать двумерный массив размером m×n заполненный целыми числами
-int [,] Array ( int m,int n) // метод создания массива
+int[,] Array(int m, int n) // метод создания массива
 {
-int [,] Array  = new int [m, n];
-return Array;
+    int[,] Array = new int[m, n];
+    return Array;
 }
 
-void PrintImage(int [,] Arr)
+void PrintImage(int[,] Arr)
 {
-   
+
     for (int i = 0; i < Arr.GetLength(0); i++)
     {
         for (int j = 0; j < Arr.GetLongLength(1); j++)
         {
-            Console.Write(i+1);
+            Console.Write(i + 1);
 
         }
         Console.WriteLine();
     }
 }
-int [,] Arr = Array(4, 5);
+int[,] Arr = Array(4, 5);
 PrintImage(Arr);
 
 
 
-// Показать двумерный массив размером m×n заполненный вещественными числами
+//49.  Показать двумерный массив размером m×n заполненный вещественными числами
+
 // В двумерном массиве n×k заменить четные элементы на противоположные
 // Задать двумерный массив следующим правилом: Aₘₙ = m+n
 // В двумерном массиве заменить элементы, у которых оба индекса чётные на их квадраты
