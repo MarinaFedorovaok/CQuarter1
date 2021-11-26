@@ -20,11 +20,33 @@ void PrintImage(int[,] Arr)
     }
 }
 int[,] Arr = Array(4, 5);
-PrintImage(Arr);
+//PrintImage(Arr);
 
 
 
 //49.  Показать двумерный массив размером m×n заполненный вещественными числами
+double[,] ArrayD(int m, int n) // метод создания массива
+{
+    double[,] Array = new double[m, n];
+    return Array;
+}
+
+void PrintArray(double[,] Arr)
+{
+
+    for (int i = 0; i < Arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < Arr.GetLongLength(1); j++)
+        {
+            Console.Write((i + 1)/3);
+
+        }
+        Console.WriteLine();
+    }
+}
+double[,] Arr2 = ArrayD(4, 5);
+PrintArray(Arr2);
+
 
 // В двумерном массиве n×k заменить четные элементы на противоположные
 // Задать двумерный массив следующим правилом: Aₘₙ = m+n
