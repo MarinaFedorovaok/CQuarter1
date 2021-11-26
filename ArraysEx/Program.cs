@@ -33,13 +33,12 @@ double[,] ArrayD(int m, int n) // метод создания массива
 
 void PrintArray(double[,] Arr)
 {
-
     for (int i = 0; i < Arr.GetLength(0); i++)
     {
         for (int j = 0; j < Arr.GetLongLength(1); j++)
         {
-            Console.Write((i + 1)/3);
-
+            double n = (double)(new Random().Next(2, 9))/3;
+            Console.Write($"{n}*");
         }
         Console.WriteLine();
     }
