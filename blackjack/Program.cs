@@ -20,18 +20,18 @@
 // Сама игра проходит так:
 
 // Создаем колоду карт.
-int [] CreateCards(int n)// -метод создает колоду карт в зависмости от количества карт в колоде. 
- //        Итог работы метода - массив
+//int [] CreateCards(int n)// -метод создает колоду карт в зависмости от количества карт в колоде. 
+//        Итог работы метода - массив
 // Значения очков каждой карты: от двойки до десятки — от 2 до 10 соответственно, 
 //у туза — 1 или 11 (11 пока общая сумма не больше 21, далее 1), 
 // у т. н. картинок (король, дама, валет) — 10.
 
- //В колоде по 4 карты от 2 до 9, 11, и 7 карт 10. Есть счетчик, берем карты по порядку. 
- // Идем по массиву
- //****** Владимир
- 
+//В колоде по 4 карты от 2 до 9, 11, и 7 карт 10. Есть счетчик, берем карты по порядку. 
+// Идем по массиву
+//****** Владимир
+
 // Для игры нам необходима перемешанная колода, поэтому надо в случайном порядке перетасовать карты (или сделать какой-то механизм, чтобы менять порядок карт)
-int Turn (int playerNum, int [] Arr) // принимает номер игрока, массив с картами. Выясняет, хочет ли игрок делать ход
+//int Turn (int playerNum, int [] Arr) // принимает номер игрока, массив с картами. Выясняет, хочет ли игрок делать ход
 // присваивает значение переменным bool wantsCards0 = true;
 // bool wantsCards1 = true;
 // Возвращает количество очков игрока
@@ -45,35 +45,71 @@ int Turn (int playerNum, int [] Arr) // принимает номер игрок
 // Метод определения веса туза (вызывется если карта  = 11)
 // ***Евгений
 
-int [] score () // Выдает массив с картами игрока 
+//int [] score () // Выдает массив с картами игрока 
 
 // **Марина
-bool oneWantsCards (bool player1, bool player2) // метод определяет, надо ли делать следующий ход
+//bool oneWantsCards (bool player1, bool player2) // метод определяет, надо ли делать следующий ход
 // y -yes n - no
 
-int winner (int score1, int score2) //метод определяет победителя в раунде
+//int winner (int score1, int score2) //метод определяет победителя в раунде
 // Можно продолжить играть и перейти к следующему раунду (шаг 3).
- //**************************************
- //Материалы для работы:
+//**************************************
+//Материалы для работы:
 // Как задать динамический массив:
 
-List<int> col= new();
+//List<int> col= new();
 
 // Чтобы добавить элемент пишем
-col.Add(123);
+//col.Add(123);
 
 //Чтобы удалить col.Remove(123);
 
 //Узнать количество элементов : col.Count
-int [] cards = CreateCards(52);
-int score0  
-int score1 ;
-int i = 0;
-bool wantsCards0 = true;
-bool wantsCards1 = true;
-while oneWantsCards (wantsCards0, wantsCards1)
+// int[] cards = CreateCards(52);
+// int score0  
+// int score1 ;
+// int i = 0;
+// bool wantsCards0 = true;
+// bool wantsCards1 = true;
+// while oneWantsCards(wantsCards0, wantsCards1)
+// {
+//     score0 = Turn(0);
+//     score1 = Turn(1);
+// }
+// winner(score0, score1);
+
+int[] mixCards(int[] cards) // метод сортировки колоды
 {
-   score0 = Turn (0);
-   score1 = Turn (1); 
+    int[] randomArr = new int[cards.Length];  //создали вспомогательный массив
+    for (int i = 0; i < randomArr.Length; i++)
+    {
+        randomArr[i] = new Random().Next(0, 100); // заполняем вспомогательный массив случайными числами
+    }
+    for (int i = 0; i < randomArr.Length; i++) //делаем пузырьковую сортировку вспом массива и параллельно мешаем наш массив
+    {
+        int min = randomArr[0];
+        int buff = min;
+        int buffCards = cards[0];
+        if (randomArr[i] < min)
+        {
+            buff = randomArr[0];
+            buffCards = cards[0];
+            randomArr[0] = randomArr[i];
+            cards[0] = cards[i];
+            randomArr[i] = buff;
+            cards[i] = buffCards;
+        }
+    } 
+    return cards;
 }
-winner (score0, score1);
+string PrintArray(int[] array) //Создаем метод выведения массива на экран в строку
+{
+    string res = String.Empty;
+    for (int i = 0; i < array.Length; i++)
+    {
+        res += $"{array[i]} ";
+    }
+    return res;
+}
+int [] Arr = {1, 4, 6, 8, 14, 1, 4, 6, 8, 14,1, 4, 6, 8, 14};
+Console.Write(PrintArray(mixCards(Arr)));
