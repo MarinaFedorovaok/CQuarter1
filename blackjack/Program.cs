@@ -36,8 +36,6 @@ string PrintArray(int[] array) //Создаем метод выведения м
 int [] Arr = {1, 4, 6, 8, 14, 1, 4, 6, 8, 14,1, 4, 6, 8, 14};
 // Console.Write(PrintArray(mixCards(Arr)));
 
-
-
 // using System;
 
 namespace Game
