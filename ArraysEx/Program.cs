@@ -5,49 +5,77 @@ int[,] Array(int m, int n) // метод создания массива
     int[,] Array = new int[m, n];
     return Array;
 }
-
-void PrintImage(int[,] Arr)
+int[,] FillArray(int[,] Arr) // метод заполения массива 
 {
 
     for (int i = 0; i < Arr.GetLength(0); i++)
     {
         for (int j = 0; j < Arr.GetLongLength(1); j++)
         {
-            Console.Write(i + 1);
+            Arr[i, j] = (new Random().Next(-100, 100));
+        }
+    }
+    return Arr;
+}
+void PrintArray(int[,] Arr) // метод вывода массива в консоль
+{
 
+    for (int i = 0; i < Arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < Arr.GetLongLength(1); j++)
+        {
+            Console.Write($"*{Arr[i, j]}");
         }
         Console.WriteLine();
     }
 }
-int[,] Arr = Array(4, 5);
-//PrintImage(Arr);
+
+//int[,] Arr = Array(4, 5);
+//PrintArray(Arr);
 
 
 
 //49.  Показать двумерный массив размером m×n заполненный вещественными числами
-double[,] ArrayD(int m, int n) // метод создания массива
+double[,] ArrayD(int m, int n) // метод создания массива вещественны чисел
 {
     double[,] Array = new double[m, n];
     return Array;
 }
 
-void PrintArray(double[,] Arr)
+void PrintArrayDouble(double[,] Arr)
 {
     for (int i = 0; i < Arr.GetLength(0); i++)
     {
         for (int j = 0; j < Arr.GetLongLength(1); j++)
         {
-            double n = (double)(new Random().Next(2, 9))/3;
+            double n = new Random().Next(10, 90) + new Random().NextDouble();
             Console.Write($"{n}*");
         }
         Console.WriteLine();
     }
 }
-double[,] Arr2 = ArrayD(4, 5);
-PrintArray(Arr2);
+//double[,] Arr2 = ArrayD(4, 5);
+//PrintArray(Arr2);
 
 
-// В двумерном массиве n×k заменить четные элементы на противоположные
+// 50. В двумерном массиве n×k заменить четные элементы на противоположные
+int[,] СhangeArray(int[,] arr) // метод замены четных элементов на противоположные
+{
+    int[,] arrChanged = new int[arr.GetLength(0), arr.GetLongLength(1)];
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLongLength(1); j++)
+        {
+            arrChanged[i, j] = -arr[i, j];
+        }
+    }
+    return arrChanged;
+}
+int[,] arr = Array(5, 5);
+PrintArray(FillArray(arr));
+Console.WriteLine();
+PrintArray(СhangeArray(arr));
+
 // Задать двумерный массив следующим правилом: Aₘₙ = m+n
 // В двумерном массиве заменить элементы, у которых оба индекса чётные на их квадраты
 // В двумерном массиве показать позиции числа, заданного пользователем или указать, что такого элемента нет
