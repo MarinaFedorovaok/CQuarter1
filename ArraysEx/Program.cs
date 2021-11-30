@@ -72,11 +72,26 @@ int[,] СhangeArray(int[,] arr) // метод замены четных элем
     return arrChanged;
 }
 int[,] arr = Array(5, 5);
-PrintArray(FillArray(arr));
-Console.WriteLine();
-PrintArray(СhangeArray(arr));
+// PrintArray(FillArray(arr));
+// Console.WriteLine();
+// PrintArray(СhangeArray(arr));
 
-// Задать двумерный массив следующим правилом: Aₘₙ = m+n
+// 51. Задать двумерный массив следующим правилом: Aₘₙ = m+n
+int[,] FillArray2(int[,] Arr) // метод задания массива по правилу Aₘₙ = m+n
+{
+
+    for (int i = 0; i < Arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < Arr.GetLongLength(1); j++)
+        {
+            Arr[i, j] = i+j;
+        }
+    }
+    return Arr;
+}
+PrintArray(FillArray2(arr));
+// Console.WriteLine();
+// PrintArray(СhangeArray(arr));
 // В двумерном массиве заменить элементы, у которых оба индекса чётные на их квадраты
 // В двумерном массиве показать позиции числа, заданного пользователем или указать, что такого элемента нет
 // В матрице чисел найти сумму элементов главной диагонали
