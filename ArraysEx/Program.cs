@@ -71,7 +71,7 @@ int[,] СhangeArray(int[,] arr) // метод замены четных элем
     }
     return arrChanged;
 }
-int[,] arr = Array(5, 6);
+int[,] arr = Array(2, 5);
 PrintArray(FillArray(arr));
 // Console.WriteLine();
 // PrintArray(СhangeArray(arr));
@@ -145,18 +145,23 @@ int MainDiagonal(int[,] arr)
 // MainDiagonal(arr);
 
 // 55. Дан целочисленный массив. Найти среднее арифметическое каждого из столбцов.
-double ArithmeticMean(int[,] arr, int m)// принимает номер столбца
+double[] ArithmeticMean(int[,] arr)
 {
+    double[] arithmeticMean = new double[arr.GetLength(1)];
     double arithmeticMeanSumm = 0;
-    for (int i = 0; i < arr.GetLength(0); i++)
+    for (int j = 0; j < arr.GetLongLength(1); j++)
     {
-
-        arithmeticMeanSumm = arithmeticMeanSumm + arr[i, m];
+        arithmeticMeanSumm = 0;
+        for (int i = 0; i < arr.GetLength(0); i++)
+        {
+            arithmeticMeanSumm = arithmeticMeanSumm + arr[i, j];
+        }
+        arithmeticMean[j] = arithmeticMeanSumm / arr.GetLength(0);
     }
-    return (double) arithmeticMeanSumm / arr.GetLength(0);
+    return arithmeticMean;
 }
 
-void PrintArrayString(int[] arr)
+void PrintArrayString(double[] arr)
 {
     Console.WriteLine("**************");
     for (int i = 0; i < arr.Length; i++)
@@ -164,8 +169,10 @@ void PrintArrayString(int[] arr)
         Console.Write($"{arr[i]}*");
     }
 }
-Console.WriteLine(ArithmeticMean(arr, 0));
-// Написать программу, которая обменивает элементы первой строки и последней строки
+PrintArrayString(ArithmeticMean(arr));
+// Console.WriteLine(ArithmeticMean(arr, 0));
+
+// 56. Написать программу, которая обменивает элементы первой строки и последней строки
 // Написать программу, упорядочивания по убыванию элементы каждой строки двумерной массива.
 // Написать программу, которая в двумерном массиве заменяет строки на столбцы или сообщить
 // В прямоугольной матрице найти строку с наименьшей суммой элементов.
