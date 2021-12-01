@@ -71,7 +71,7 @@ int[,] СhangeArray(int[,] arr) // метод замены четных элем
     }
     return arrChanged;
 }
-int[,] arr = Array(5, 5);
+int[,] arr = Array(5, 6);
 PrintArray(FillArray(arr));
 // Console.WriteLine();
 // PrintArray(СhangeArray(arr));
@@ -142,8 +142,29 @@ int MainDiagonal(int[,] arr)
     Console.WriteLine(summ);
     return summ;
 }
-MainDiagonal(arr);
+// MainDiagonal(arr);
+
 // 55. Дан целочисленный массив. Найти среднее арифметическое каждого из столбцов.
+int ArithmeticMean(int[,] arr, int m)// принимает номер столбца
+{
+    int arithmeticMeanSumm = 0;
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+
+        arithmeticMeanSumm = arithmeticMeanSumm + arr[i, m]; //получили массив (m - ный столбец)
+    }
+    return arithmeticMeanSumm/arr.GetLength(0);
+}
+
+void PrintArrayString(int[] arr)
+{
+    Console.WriteLine("**************");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"{arr[i]}*");
+    }
+}
+Console.WriteLine(ArithmeticMean(arr, 0));
 // Написать программу, которая обменивает элементы первой строки и последней строки
 // Написать программу, упорядочивания по убыванию элементы каждой строки двумерной массива.
 // Написать программу, которая в двумерном массиве заменяет строки на столбцы или сообщить
