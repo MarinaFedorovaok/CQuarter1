@@ -145,15 +145,15 @@ int MainDiagonal(int[,] arr)
 // MainDiagonal(arr);
 
 // 55. Дан целочисленный массив. Найти среднее арифметическое каждого из столбцов.
-int ArithmeticMean(int[,] arr, int m)// принимает номер столбца
+double ArithmeticMean(int[,] arr, int m)// принимает номер столбца
 {
-    int arithmeticMeanSumm = 0;
+    double arithmeticMeanSumm = 0;
     for (int i = 0; i < arr.GetLength(0); i++)
     {
 
-        arithmeticMeanSumm = arithmeticMeanSumm + arr[i, m]; //получили массив (m - ный столбец)
+        arithmeticMeanSumm = arithmeticMeanSumm + arr[i, m];
     }
-    return arithmeticMeanSumm/arr.GetLength(0);
+    return (double) arithmeticMeanSumm / arr.GetLength(0);
 }
 
 void PrintArrayString(int[] arr)
