@@ -29,11 +29,8 @@ void PrintArray(int[,] Arr) // метод вывода массива в кон�
         Console.WriteLine();
     }
 }
-
 //int[,] Arr = Array(4, 5);
 //PrintArray(Arr);
-
-
 
 //49.  Показать двумерный массив размером m×n заполненный вещественными числами
 double[,] ArrayD(int m, int n) // метод создания массива вещественны чисел
@@ -41,7 +38,6 @@ double[,] ArrayD(int m, int n) // метод создания массива в�
     double[,] Array = new double[m, n];
     return Array;
 }
-
 void PrintArrayDouble(double[,] Arr)
 {
     for (int i = 0; i < Arr.GetLength(0); i++)
@@ -57,7 +53,6 @@ void PrintArrayDouble(double[,] Arr)
 //double[,] Arr2 = ArrayD(4, 5);
 //PrintArray(Arr2);
 
-
 // 50. В двумерном массиве n×k заменить четные элементы на противоположные
 int[,] СhangeArray(int[,] arr) // метод замены четных элементов на противоположные
 {
@@ -72,7 +67,7 @@ int[,] СhangeArray(int[,] arr) // метод замены четных элем
     return arrChanged;
 }
 int[,] arr = Array(2, 5);
-PrintArray(FillArray(arr));
+//PrintArray(FillArray(arr));
 // Console.WriteLine();
 // PrintArray(СhangeArray(arr));
 
@@ -169,10 +164,30 @@ void PrintArrayString(double[] arr)
         Console.Write($"{arr[i]}*");
     }
 }
-PrintArrayString(ArithmeticMean(arr));
-// Console.WriteLine(ArithmeticMean(arr, 0));
+//PrintArrayString(ArithmeticMean(arr));
 
 // 56. Написать программу, которая обменивает элементы первой строки и последней строки
+int[,] ArraySwap(int[,] arr)
+{
+    int buff = 0;
+    int n = arr.GetLength(0);
+    //int k = arr.GetLength(1);
+    for (int i = 0; i < arr.GetLength(1); i++)
+    {
+
+        // Console.WriteLine(arr.GetLength(0));
+        // Console.WriteLine(arr.GetLength(1));
+        buff = arr[0, i];
+        arr[0, i] = arr[n - 1, i];
+        arr[n - 1, i] = buff;
+        // Console.WriteLine(n);
+        // Console.WriteLine(k);
+    }
+    return arr;
+}
+PrintArray(FillArray((arr)));
+Console.WriteLine();
+PrintArray(ArraySwap(arr));
 // Написать программу, упорядочивания по убыванию элементы каждой строки двумерной массива.
 // Написать программу, которая в двумерном массиве заменяет строки на столбцы или сообщить
 // В прямоугольной матрице найти строку с наименьшей суммой элементов.
