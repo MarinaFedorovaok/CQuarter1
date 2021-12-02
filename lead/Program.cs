@@ -202,6 +202,26 @@ int[] DoubleArr(int[] array)//метод копирования массива
     }
     return Arr1;
 }
-int[] arr = {1, 2, 3, 4};
-PrintArray(DoubleArr(arr));
-PrintArray(DoubleArr(arr));
+int[] arr = { 1, 2, 3, 4 };
+//PrintArray(DoubleArr(arr));
+//PrintArray(DoubleArr(arr));
+//66. Числа от 0 до N
+string ShowN(int n)
+{
+    return n <= 0 ? "0" : $"{ShowN(n - 1)} {n}";
+    // if (n <= 0) return "0";
+    // else
+    // {
+    //     return $"{ShowN(n - 1)} {n}";
+    // } 
+}
+
+string ShowN1(int n) =>  n <= 0 ? "0" : $"{ShowN1(n - 1)} {n}";
+ 
+void A (int n)
+{
+   System.Console.WriteLine(n);
+   if(n>0) A(n-1);
+}
+A(5);
+//Console.WriteLine(ShowN1(5));
