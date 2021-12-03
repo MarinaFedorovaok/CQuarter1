@@ -29,23 +29,36 @@ string PrintNM(int m, int n)
 //Console.WriteLine(PrintNM(33, 25));
 
 //69. Найти сумму элементов от M до N, N и M заданы
-int Summ (int m, int n)
+int Summ(int m, int n)
 {
-    if (n==m) return n;
+    if (n == m) return n;
     else
     {
-        return n+Summ (m, n-1);
+        return n + Summ(m, n - 1);
     }
 }
 //Console.WriteLine(Summ(2,6));
 
 //70. Найти сумму цифр числа
-int SummFigures (int n)
+int SummFigures(int n)
 {
-       if (n == 0) return 0;
+    if (n == 0) return 0;
     else
     {
-        return n%10 + SummFigures(n/10);
+        return n % 10 + SummFigures(n / 10);
     }
 }
-Console.WriteLine(SummFigures(1287));
+//Console.WriteLine(SummFigures(1287));
+
+//71. Написать программу вычисления функции Аккермана
+int A(int m, int n)
+{
+    if (m == 0) return n + 1;
+    if (n == 0)
+    {
+        if (m == 0) return 1;
+        else return A(m - 1, 1);
+    }
+    else return A(m-1, A(m, n-1));
+}
+Console.WriteLine (A(0, 5));
