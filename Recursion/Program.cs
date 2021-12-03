@@ -37,4 +37,15 @@ int Summ (int m, int n)
         return n+Summ (m, n-1);
     }
 }
-Console.WriteLine(Summ(2,6));
+//Console.WriteLine(Summ(2,6));
+
+//70. Найти сумму цифр числа
+int SummFigures (int n)
+{
+       if (n == 0) return 0;
+    else
+    {
+        return n%10 + SummFigures(n/10);
+    }
+}
+Console.WriteLine(SummFigures(1287));
