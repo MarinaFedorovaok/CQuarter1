@@ -72,4 +72,14 @@ int Degree (int a, int b)
         return a*Degree (a, b-1);
     }
 }
-Console.WriteLine (Degree(3,2));
+//Console.WriteLine (Degree(3,2));
+
+//73. Написать программу показывающие первые N чисел,
+// для которых каждое следующее равно сумме двух предыдущих.
+// Первые два элемента последовательности задаются пользователем
+string ShowN (int n, int m)
+{
+    if ((n+m) > 300) return $"{n+m}";
+    return $" {n+ShowN(m, m+n)}";
+}
+Console.WriteLine(ShowN (2, 5));
