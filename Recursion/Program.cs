@@ -59,17 +59,17 @@ int A(int m, int n)
         if (m == 0) return 1;
         else return A(m - 1, 1);
     }
-    else return A(m-1, A(m, n-1));
+    else return A(m - 1, A(m, n - 1));
 }
 // Console.WriteLine (A(0, 5));
 
 // 72. Написать программу возведения числа А в целую стень B
-int Degree (int a, int b)
+int Degree(int a, int b)
 {
     if (b == 0) return 1;
     else
     {
-        return a*Degree (a, b-1);
+        return a * Degree(a, b - 1);
     }
 }
 //Console.WriteLine (Degree(3,2));
@@ -77,9 +77,29 @@ int Degree (int a, int b)
 //73. Написать программу показывающие первые N чисел,
 // для которых каждое следующее равно сумме двух предыдущих.
 // Первые два элемента последовательности задаются пользователем
-string ShowN (int n, int m)
+string ShowN(int n, int m)
 {
-    if ((n+m) > 300) return $"{n+m}";
-    return $" {n+ShowN(m, m+n)}";
+    if ((n + m) > 300) return $"{n + m}";
+    return $" {n + ShowN(m, m + n)}";
 }
-Console.WriteLine(ShowN (2, 5));
+//Console.WriteLine(ShowN (2, 5));
+//74. В некотором машинном алфавите имеются четыре буквы «а», «и», «с» и «в». 
+//Покажите все слова, состоящие из n букв, которые можно построить из букв этого алфавита
+int n = 1;
+void MakeWords(string alphabet, char[] word, int lenth = 0)
+{
+    if (lenth == word.Length)
+    {
+        Console.WriteLine($"{n++} {new String(word)}");
+        return;
+    }
+    else
+    {
+        for (int i = 0; i < alphabet.Length; i++)
+        {
+            word[lenth] = alphabet[i];
+            MakeWords(alphabet, word, lenth + 1);
+        }
+    }
+}
+MakeWords ("проц", new char[3]);
