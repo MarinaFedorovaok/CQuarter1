@@ -416,19 +416,38 @@
 
 // for(int index = 0; index < Cube.Length; index++) Console.WriteLine(Cube[index]);
 // 24. Найти кубы чисел от 1 до N
-// string func24 (int n)
-// {   
-//     string text = "All is OK";
-//     int i = 1;
-//     while (i<=n)
-//     {
+int func24 (int n)
+{   
+    //string text = "All is OK";
+    int i = 1;
+    int result24 = 0;
+    while (i<=n)
+    {
+       result24 = (int)Math.Pow(i, 3);
+         i++;
+    }
+      return result24;
+}
+Console.WriteLine(func24(5));
 
-//         Console.WriteLine (Math.Pow(i, 3));
-//          i++;
-//     }
-//       return text;
-// }
-// Console.WriteLine(func24(5));
+void Test24 ()
+{
+    int [] result = {0, 1, 8, 27, 64, 125, 216};
+    //int [] numbers = new int [6];
+    bool res = true;
+    for (int i =0; i<result.Length; i++)
+    {
+        if (result[i]!=func24(i)) 
+        {res = false;
+        Console.WriteLine(res);
+         }
+         else
+         {
+            Console.WriteLine(res); 
+         }
+    }
+}
+Test24();
 
 // 25. Найти сумму чисел от 1 до А
 
