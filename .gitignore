@@ -15,3 +15,6 @@ obj/
         */.gitignore
 ../example 009/example 009.csproj
 blackJack2
+ex.md
+.gitignore
+guess_the_number/*

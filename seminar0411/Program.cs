@@ -3,7 +3,7 @@
 // int func (int x)
 // {
 // return x*x;
-// 
+//
 // int res = func (5);
 // Console.WriteLine(res);
 //  1. По двум заданным числам проверять является ли первое квадратом второго
@@ -36,9 +36,9 @@
 // {
 //     if (a == b*b)
 //     {
-//   Console.WriteLine("Является");  
+//   Console.WriteLine("Является");
 //     }
-//     else 
+//     else
 //     {Console.WriteLine ("Не является");
 //     }
 // }
@@ -51,8 +51,8 @@
 
 //  2. Даны два числа. Показать большее и меньшее число
 // Решение Сергея
-// int Max2(int first, int second) => first > second ? first : second; 
-// int Min2(int fir, int sec) => fir < sec ? fir : sec; 
+// int Max2(int first, int second) => first > second ? first : second;
+// int Min2(int fir, int sec) => fir < sec ? fir : sec;
 
 // (int min, int max) MinMax(int f, int s) => f > s ? (f, s) : (s, f);
 
@@ -125,11 +125,11 @@
 //  7. Показать числа от -N до N
 // void func7support(int m, int n)
 // {
-//     if (m<=n) 
+//     if (m<=n)
 //     {
 //         Console.WriteLine (m);
 //         func7support(m+1, n);
-//     } 
+//     }
 // }
 
 // void func7(int n)
@@ -144,7 +144,7 @@
 // int func7 (int N)
 // {
 //     int x= -N;
-//     while (x <=N ) 
+//     while (x <=N )
 //    {
 //        Console.WriteLine (x);
 //         x++;
@@ -156,7 +156,7 @@
 
 
 // int N = Convert.ToInt32(Console.ReadLine());
-//   for (int x = -N; x<=N; x++) 
+//   for (int x = -N; x<=N; x++)
 // {
 //     Console.WriteLine(x);
 // }
@@ -170,21 +170,21 @@
 //       {
 //          Console.WriteLine(N);
 //          func8(N-2);
-//       } 
+//       }
 // }
 // func8(5);
 
 //**************************************Var2
 
 //    int N = Convert.ToInt32(Console.ReadLine());
-//      for (int x = 0; x<=N; x++) 
+//      for (int x = 0; x<=N; x++)
 //     {
 //          if (x % 2 ==0)
 //            {
 //                Console.WriteLine (x);
 //        }
 
-//      } 
+//      }
 //  9. Показать последнюю цифру трёхзначного числа
 
 // int N = Convert.ToInt32(Console.ReadLine());
@@ -234,16 +234,16 @@
 //    int res = 0;
 //    if  ( a>b )
 //       {
-//         if (a %b ==0) 
-//          {       
+//         if (a %b ==0)
+//          {
 //            res = 1;
 //          }
 //          else res = a%b;
 //       }
 //  if  ( b>a )
 //       {
-//             if (b %a ==0) 
-//             {       
+//             if (b %a ==0)
+//             {
 //             res = 2;
 //             }
 //            else  res = b%a;
@@ -280,12 +280,12 @@
 //     int res = 0;
 //     if  (num %7 ==0)
 //     {
-//         if (num %23 ==0) 
-//         {       
+//         if (num %23 ==0)
+//         {
 //          res = 1;
 //         }
 //     }
-// return res; 
+// return res;
 // }
 // int ans = func15(160);
 // Console.WriteLine(ans);
@@ -303,9 +303,9 @@
 // {
 //  int [] array  = {1, 2, 3, 4, 5, 6, 7};
 //  int index = 0;
-//  for (index=0; index<=array.Length; index++)   
+//  for (index=0; index<=array.Length; index++)
 //     {
-//         if ((num - 1)>=array[5]) 
+//         if ((num - 1)>=array[5])
 //     }
 // }
 // 17. По двум заданным числам проверять является ли одно квадратом другого
@@ -318,7 +318,7 @@
 //     }
 //     else
 //     {
-//       if (b==a*a) res=2;  
+//       if (b==a*a) res=2;
 
 //     }
 //     return res;
@@ -341,14 +341,14 @@
 // }
 
 // 18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
-// bool Func18(bool x, bool y) 
-// { 
-//     return (!(x && y) == !x || !y);  
-// } 
-// Console.WriteLine(Func18(false, false)); 
+// bool Func18(bool x, bool y)
+// {
+//     return (!(x && y) == !x || !y);
+// }
+// Console.WriteLine(Func18(false, false));
 // Console.WriteLine(Func18(false, true ));
-// Console.WriteLine(Func18(true,  false)); 
-// Console.WriteLine(Func18(true,  true )); 
+// Console.WriteLine(Func18(true,  false));
+// Console.WriteLine(Func18(true,  true ));
 
 // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
 // int func19 (int x, int  y)
@@ -401,53 +401,55 @@
 // }
 // Console.WriteLine(func22(-3,-4,-7,-8));
 // Почувствуй себя мидлом
-// 23. Показать таблицу квадратов чисел от 1 до N 
-// double[] FuncPow(int n) 
-// { 
-//     double [] array = new double [n]; 
-//     for(int i = 1; i <= n; i++) 
-//     { 
-//         array[i - 1] = Math.Pow(i, 2); 
-//     } 
-//     return array; 
-// } 
+// 23. Показать таблицу квадратов чисел от 1 до N
+// double[] FuncPow(int n)
+// {
+//     double [] array = new double [n];
+//     for(int i = 1; i <= n; i++)
+//     {
+//         array[i - 1] = Math.Pow(i, 2);
+//     }
+//     return array;
+// }
 
-// double [] Cube = FuncPow(14); 
+// double [] Cube = FuncPow(14);
 
 // for(int index = 0; index < Cube.Length; index++) Console.WriteLine(Cube[index]);
 // 24. Найти кубы чисел от 1 до N
-int func24 (int n)
-{   
+int func24(int n)
+{
     //string text = "All is OK";
     int i = 1;
     int result24 = 0;
-    while (i<=n)
+    while (i <= n)
     {
-       result24 = (int)Math.Pow(i, 3);
-         i++;
+        result24 = (int)Math.Pow(i, 3);
+        i++;
     }
-      return result24;
+    return result24;
 }
 Console.WriteLine(func24(5));
 
-void Test24 ()
+
+void Test24()
 {
-    int [] result = {0, 1, 8, 27, 64, 125, 216};
+    int[] result = { 0, 1, 8, 27, 64, 125, 216 };
     //int [] numbers = new int [6];
     bool res = true;
-    for (int i =0; i<result.Length; i++)
+    for (int i = 0; i < result.Length; i++)
     {
-        if (result[i]!=func24(i)) 
-        {res = false;
-        Console.WriteLine(res);
-         }
-         else
-         {
-            Console.WriteLine(res); 
-         }
+        if (result[i] != func24(i))
+        {
+            res = false;
+            Console.WriteLine(res);
+        }
+        else
+        {
+            Console.WriteLine(res);
+        }
     }
 }
-Test24();
+//Test24();
 
 // 25. Найти сумму чисел от 1 до А
 
@@ -475,10 +477,10 @@ Test24();
 // int func26 (int A, int B)
 // {
 //     int result = 1;
-//     for (int i = 1; i < B; i++) 
+//     for (int i = 1; i < B; i++)
 //     {
 //         result = result * A;
-//     } 
+//     }
 //     return result;
 // }
 // Console.WriteLine(func26(3, 4));
@@ -590,7 +592,7 @@ Test24();
 
 // void func30recursion2 (int i, int n)
 // {
-//     if (i<n) 
+//     if (i<n)
 //     {Console.WriteLine(i*i*i);
 //      func30recursion2 (i+2, n);
 //    }
@@ -669,7 +671,7 @@ Test24();
 // // Почувствуй себя сеньором
 //****************************************
 
-// 31. Задать массив из 8 элементов и вывести их на экран 
+// 31. Задать массив из 8 элементов и вывести их на экран
 //New Variant
 // int[] CreateArray(int n) //Создаем метод создания массива
 // {
@@ -709,7 +711,7 @@ Test24();
 // }
 // func31(8);
 
-// 32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
+// 32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран
 // int[] arr = CreateArray(8);
 // FillArray(arr, 0, 1);
 // Console.Write(PrintArray(arr));
@@ -758,9 +760,9 @@ Test24();
 //     }
 // }
 // multipleArray(arr2, -5); //заполнили второй массив
-// Console.WriteLine(PrintArray(arr2)); //Печатаем второй массив 
+// Console.WriteLine(PrintArray(arr2)); //Печатаем второй массив
 
-// 35. Определить, присутствует ли в заданном массиве, некоторое число 
+// 35. Определить, присутствует ли в заданном массиве, некоторое число
 // int[] arr = CreateArray(12); // создали массив
 // FillArray(arr, 0, 9); //заполнили  массив
 // Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
@@ -797,7 +799,7 @@ Test24();
 // FillArray(arr, 0, 199); //заполнили  массив числами
 // // Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
 
-// int countCutArray(int[] array, int first, int second) // Создаем метод для подсчета количества элементов 
+// int countCutArray(int[] array, int first, int second) // Создаем метод для подсчета количества элементов
 //                                                       //из отрезка [first- second]
 
 // {
@@ -829,7 +831,7 @@ Test24();
 // //Console.WriteLine($"Сумма элементов на нечетной позиции:{summOddArray(arr)}");
 
 // // 39. Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
-// // int[] arr = CreateArray(10); // создали массив 
+// // int[] arr = CreateArray(10); // создали массив
 // // FillArray(arr, 0, 9); //заполнили  массив числами
 // // Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
 // int compositinArray(int[] array, int n) // Создаем метод для нахождения произведения пар чисел
@@ -840,7 +842,7 @@ Test24();
 //Console.WriteLine(compositinArray(arr, 2));
 
 // // 40. В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
-// int[] arr = CreateArray(328); // создали массив 
+// int[] arr = CreateArray(328); // создали массив
 // FillArray(arr, 2000, 3557); //заполнили  массив числами
 // Console.WriteLine(PrintArray(arr)); //Печатаем массив для проверки результата
 // int maxArray(int[] array) // Создаем метод для нахождения максимального элемента массива
@@ -874,4 +876,3 @@ Test24();
 // int ma = maxArray(arr);
 // int mi = minArray(arr);
 //Console.WriteLine($"Разница между максимальным и минимальным элементом:{diff(ma, mi)}");
-
